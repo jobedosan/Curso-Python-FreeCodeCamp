@@ -197,22 +197,70 @@
         <li>
             Los nombre de las variables deben empezar con una letra o con un guión bajo: _mi_variable ó mi_variable, por ejemplo.
         </li>
-        
+        <br>
         <li>
             Los nombre de las variables no pueden comenzar con un número: 9mi_variable, por ejemplo, al escribir una variable de esta forma se mostrará un error que dirá SyntaxError: invalid Syntax, es decir, error de sintaxis: sintaxis inválida, este error aparecerá en el programa cuando escribamos algo que vila las reglas de sintaxis del lenguaje de programación.
         </li>
-        
+        <br>
         <li>
             Los nombres de las variables solo pueden contener caracteres alfanuméricos y el caracter especial de guión bajo (A-Z, a-z, 0-9, _): num_vistas_ = 12332, por ejemplo. El guión bajo se utliza para separar palabras en caso de que el nombre de la variable esté conformado por más de una palabra.
         </li>
-
+        <br>
         <li>
             Los nombres de variables no pueden contener caracteres que no sean alfanuméricos: @variable = 34, por ejemplo.
         </li>
-
+        <br>
         <li>
             En Python se distingue entre mayúsculas y minúsculas, por lo que una variable puede decir lo mismo al leerlo pero al tener mayúsculas o minúsculas serán en realidad variables distintas: Edad, edad, EDAD, por ejemplo, los tres nombres anteriores dicen edad pero en Python son tres variables distintas por el uso de mayúsculas que es distinto en cada una. Podemos probarlo en un programa definiendo y consultando las variables mencionadas en el ejemplo con distintos valores.
         </li>
     </ul>
+
+    <h2>
+        Tipos de datos
+    </h2>
+
+    <h3>
+        Datos numéricos
+    </h3>
+
+    <h4>
+        Números entero
+    </h4>
+
+    <p>
+        Este tipo de dato está constituido por los números que no tienen decimales, estos pueden ser positivos, negativos y el 0 cuando no tiene parte decimal: 5, 0 o -10, por ejemplo.
+    </p>
+
+    <p>
+        Podemos comprobar el tipo de dato que es un valor por medio de una función que existe en Python y nos permite saber el tipo de valor, esta función es type(valor), como se puede ver debemos copiar el valor dentro del paréntesis y así el programa nos dirá qué tipo de dato es. Al pasar un valor entero la consola nos reflejará el letrero int (es una abreviación de Integer que significa entero en inglés), que significa "dato entero".
+    </p>
+
+    <p>
+        En Python no existe un límite para el número entero máximo que puede ser representado en nuestro código, esto está limitado unicamente por los recursos del dispositivo en donde ejecutamos el programa
+    </p>
+
+    <h4>
+        Números en coma flotante
+    </h4>
+
+    <p>
+        Este tipo de dato está constituido por los números que tienen decimales, pueden ser positivos, negativos e incluso el cero con parte decimal. Al comprobar este tipo de datos con la función type la consola nos devolverá el letrero float (que en inglés significa flotar, los números se denominan en coma flotante por la forma en que se representan los números en memoria).
+    </p>
+
+    <h3>
+        Datos booleanos 
+    </h3>
+
+    <p>
+        Los datos booleanos representan los valores verdadero o falso. Si el valor es verdadero la consola nos regresará True (verdadero en inglés) y en caso contrario nos regresará False (falso en inglés). En python debemos trabajar con la palabra True y False porque son palabras especiales, palabras reservadas para el lenguaje de programación. También es importante recalcar que debemos escribir True o False con letra mayúscula al inicio, si no, el programa no lo reconocerá de forma correcta.
+    </p>
+
+    <p>
+        Los valores booleanos son importantes para las expresiones condicionales y ciclos (mejor conocidos como bucles). Temas que trataremos más adelante en este curso.
+    </p>
+
+    <p>
+        Los valores True y False se muestran de color distintos en el idle porque son palabras reservadas (mejor conocidas como keyword). Al comprobar un dato booleano con la función type() la consola nos regresará el texto bool, que es una abreviación de boolean, es decir, booleano en inglés.
+    </p>
 </body>
 </html>
