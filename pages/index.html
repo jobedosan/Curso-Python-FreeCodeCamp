@@ -262,5 +262,55 @@
     <p>
         Los valores True y False se muestran de color distintos en el idle porque son palabras reservadas (mejor conocidas como keyword). Al comprobar un dato booleano con la función type() la consola nos regresará el texto bool, que es una abreviación de boolean, es decir, booleano en inglés.
     </p>
+
+    <h3>
+        Cadenas de caracteres
+    </h3>
+
+    <p>
+        Este tipo de dato es muy usado en programación y es muy común, se consigue prácticamente en cualquier programa que utilicemos. Las cadenas de caracteres (String) son una secuencia de caracteres encerrados entre comilla y usados para representar texto en el programa. Este es el tipo de dato que utilizaremos en cualquier momento que necesitemos representar, usar o guardar texto en el programa.
+    </p>
+
+    <p>
+        Las cadenas de caracteres pueden tener cualquier tipo de caracter que podamos escribir con el teclado. El texto puede que se quiere guardar, usar o representar puede estar encerrado por comillas dobles ("texto") o comillas simples ('texto'), python acepta ambos estilos siempre que el código sea consistente. Al comprobar un dato de tipo String con la función type() la consola nos regresará el texto str (que es una abreviación de la palabra String en inglés).
+    </p>
+
+    <p>
+        Al asignar una cadena de caracteres a una variable y acceder a la misma por meido del nombre de la variable, python nos mostrará la cadena entre comillas simple aunque hayamos utilizado comillas dobles para definir la cadena (esto en la consola interactiva). Es importante tener en cuenta que al crear una cadena de texto no podemos mezcla comillas simples con comillas dobles: "Benjamin' o 'Benjamin", por ejemplo. Al mezclar las comillas dobles con simples para escribir un String y ejecutar el programa se producirá un error que dice SyntaxError: EOL while scanning string literal, lo cual se traduce como Error de sintaxis: fin de línea (end of line) mientras se escaneaba la cadena de caracteres. Es decir, el programa llegó al final de la línea y la cadena de caracteres aún no había terminado, python solo detecta el final de la cadena cuando detexta el tipo de comilla correspondiente.
+    </p>
+
+    <p>
+        Otro detalle importante es que el valor de un número entero no es igual que un número que forma parte de una cadena de texto, el número entero tendrá ciertas propiedades o va a poder ser utilizado en el programa de forma distinta que el número que forma parte de una cadena de texto porque son un tipo de dato distinto.
+    </p>
+
+    <p>
+        Un número como entero podrá ser utilizado en operaciones aritméticas como suma, resta, multiplicación, división, etc. Y el mismo valor como cadena de caracteres solo podrá ser utilizada como una cadena de texto tradicional.
+    </p>
+
+    <p>
+        Una característica muy importante de la cadena de caracteres es el tamaño o longitud (Length), el tamaño de la cadena de caracteres es el número de caracteres que posee. La longitud de una cadena de caracteres la podemos obtener por medio de la función len(), la función nos retornará la cantidad de caracteres de la cadena que coloquemos dentro de sus paréntesis, las comillas también deben copiarse en este caso: len("perro"), por ejemplo. Si copiamos las comillas sin nada nos arrojará cero (0). En programación cuando utilizamos una función se denomina llamar a la función. A las funciones se les pueden pasar variables si se quiere.
+    </p>
+
+    <p>
+        Si no copiamos las comillas a una cadena de texto pasada directamente a la función len(), el programa nos arrojará un error.
+    </p>
+
+    <p>
+        La estructura interna de una cadena de caracteres es similar a una rejilla, tiene una estructura muy determinada, cada caracter tiene su lugar específico en la rejilla, y cada uno de esos lugares o posiciones específicas están marcadas por un entero, a estos enteros de les denomina índice, cada uno de esos entero son denominados indice, cada uno de esos enteros se denomina como un indice individualmente.
+    </p>
+    
+    <p>
+        La secuencia comienza desde 0, no desde uno como uno cuenta normalmente, en programación y computación es común comenzar a contar desde cero (0). Esto se llama numeración basada en cero.
+    </p>
+
+    <p>
+        El primer caracter va estar en el índice 0, el segundo caracter en el índice 1 y así sucesivamente incrementando de uno en uno a medida que vamos de caracter en caracter hacia la derecha. Esta es la estructura básica de una cadena de caracteres.
+    </p>
+
+    <img src="../img/rejilla de la cadena de caracteres.png" alt="índice de una cadena de caracteres" title="índice de una cadena de caracteres">
+
+    <h2>
+        Indexación (Indexing)
+    </h2>
 </body>
 </html>
