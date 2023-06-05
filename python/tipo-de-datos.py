@@ -16,10 +16,9 @@ print(type(False))
 nombre = "Benjamin"
 print(type(nombre))
 
+#Datos string (cadena de caracteres)
+print(type("Benjamin"))
+
 #Comparación de números (como dato entero y como string)
 print(type(5))
 print(type("5"))
-
-#Función len(), en este caso nos retornará 8 y 5, en una pasamos la variable definida anteriormente y en la siguiente la palabra perro
-print(len(nombre))
-print(len('perro'))

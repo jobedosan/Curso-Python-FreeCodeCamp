@@ -16,5 +16,5 @@ print(nombre [5])
 print(nombre [6])
 print(nombre [7])
 
-#La siguiente línea provocará un error de índice (descomentar para ver el error)
+#La siguiente línea provocará un error de índice porque sobrepasamos su rango (descomentar para ver el error)
 #print(nombre [8])
