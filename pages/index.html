@@ -287,6 +287,10 @@
         Un número como entero podrá ser utilizado en operaciones aritméticas como suma, resta, multiplicación, división, etc. Y el mismo valor como cadena de caracteres solo podrá ser utilizada como una cadena de texto tradicional.
     </p>
 
+    <h2>
+        Función len()
+    </h2>
+
     <p>
         Una característica muy importante de la cadena de caracteres es el tamaño o longitud (Length), el tamaño de la cadena de caracteres es el número de caracteres que posee. La longitud de una cadena de caracteres la podemos obtener por medio de la función len(), la función nos retornará la cantidad de caracteres de la cadena que coloquemos dentro de sus paréntesis, las comillas también deben copiarse en este caso: len("perro"), por ejemplo. Si copiamos las comillas sin nada nos arrojará cero (0). En programación cuando utilizamos una función se denomina llamar a la función. A las funciones se les pueden pasar variables si se quiere.
     </p>
@@ -323,6 +327,42 @@
 
     <p>
         Es importante mencionar que el espacio también cuenta como caracter, por lo que se toma en cuenta al momento de contar el indice en una cadena.
+    </p>
+
+    <h2>
+        Rebanado (Slicing)
+    </h2>
+
+    <p>
+        Esta operación nos permite tomar una rebanada (poción) de una cadena de caracteres. Para realizar el rebanado debemos escribir la cadena o variable con la cadena de texto, seguida de dos corchetes y dos valores numéricos esparados por dos puntos (:), siendo el primer valor el inicio de la rebanada y el segundo el final de la rebanada: cadena o variable [inicio:fin]. Es importante mencionar que el caracter marcado como final de la rebanada no será incluído en el resultado. Si tenemos la cadena "Python" y queremos "yth" deberemos escribir: "Python"[1:4], por ejemplo.
+    </p>
+
+    <p>
+        Hay varias variables de este rebanado y se mostrarán y explicarán a continuación.
+    </p>
+
+    <ul>
+        <li>Slicing desde un caracter determinado de la cadena hasta su final: cadena o variable [inicio:], "perro" [2:], por ejemplo, esto nos devolverá "rro"</li>
+        <li>Slicing desde el inicio de la cadena hasta un caracter determinado de la cadena o variable: cadena o variable [:final], "perro"[:3], por ejemplo, esto nos devolverá "per"
+        </li>
+        <li>
+            Slicing de la cadena completa: cadena o variable [:], "perro" [:], por ejemplo, esto nos devolverá "perro". Es decir que esto nos permite obtener una copia de todos los caracteres de la cadena.
+        </li>
+    </ul>
+    <p>
+        Es importante mencionar que al rebanar una cadena de caracteres podemos utilizar índices que estén fuera del rango por cómo el lenguaje de programación fue imiplementado por su creador, esto no resulta en un error como cuando lo hacemos con el indexado, en este caso lo que hace es incluir el último caracter de la cadena : "perro" [1:5], por ejemplo, el índice de la cadena "perro" solo llega a 4, pero al utilizar el cinco como final, nos devolverá "erro", es decir que se incluye el último caracter de la cadena. 
+    </p>
+
+    <p>
+        No importa si colocamos como final un valor de índice que exceda por mucho el índice de la cadena, el resultado será el mismo pero no es recomendable, no es una buena práctica: "perro" [3:22], por ejemplo, esto nos devolverá "rro".
+    </p>
+
+    <h2>
+        Parámetro paso en el Slicing
+    </h2>
+
+    <p>
+        Este es un tercer parámetro que nos permite establecer la forma en que se satará de un caracter a otro, de dos en dos o de tres en tres por ejemplo. La sintaxis es la misma que el Slicing normal, solo que agregamos dos puntos (:) más para agregar el parámetro de paso: cadena o variable [inicio:fin:paso], "dinosaurio" [1:8:3], por ejemplo, esto nos devolverá "isr".
     </p>
 </body>
 </html>
