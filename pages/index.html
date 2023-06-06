@@ -364,5 +364,105 @@
     <p>
         Este es un tercer parámetro que nos permite establecer la forma en que se satará de un caracter a otro, de dos en dos o de tres en tres por ejemplo. La sintaxis es la misma que el Slicing normal, solo que agregamos dos puntos (:) más para agregar el parámetro de paso: cadena o variable [inicio:fin:paso], "dinosaurio" [1:8:3], por ejemplo, esto nos devolverá "isr".
     </p>
+
+    <h2>
+        Métodos de cadena de caracteres
+    </h2>
+
+    <p>
+        Los métodos de cadena de caracteres son operaciones comunes que tienen implementadas en Python. Para ejecutar un método de cadena de caracteres debemos copiar la cadena de caracteres o variable con la que utilizaremos el método, luego un punto (.), el nombre del método y finalmente entre paréntesis se copian los valores que necesite el método si es que los necesita: variable.método(valor), por ejemplo. Los métodos son parecidos a funciones pero están asociados a un elemento o valor en particular. Si el método no necesita un valor se copia el paréntesis vacío.
+    </p>
+
+    <h3>
+        Método capitalize
+    </h3>
+    
+    <p>
+        El método capitalize retorna una copia de la cadena con el primer caracter en mayúscula y el resto en minúscula, este método no necesita ningún valor: variable.capitalize(), por ejemplo. El paréntesis vacío sirven para decirle a nuestro programa que queremos ejecutar esa acción, es como una alerta roja. Si copiamos "perro".capitalize(), la consola nos regresará "Perro", el resultado será el mismo al escribir "pERRO".capitalize(), por dar algunos ejemplos.
+    </p>
+    
+    <h3>
+        Método find
+    </h3>
+
+    <p>
+        Este método nos permite encontrar el índice en el que empieza una palabra o letra en una cadena de texto. Como valor recibe la palabra o letra que buscamos y al buscar una letra nos señalará solamente la primera aparición de la letra. La sintaxis sería variable.find("letra o palabra"). Si la frase es "Hola Mundo" y escribimos "Hola Mundo".find("Mundo") nos retornará 5, porque la palabra "Mundo" comienza en ese índice. Adicionalmente podemos buscar frases dentro de otras cadenas y saber en dónde comienza dicha frase si existe en la cadena. 
+    </p>
+
+    <p>
+        Si buscamos algo que en realidad no existe en la cadena de texto no se presentará un error pero nos retornará el valor -1.
+    </p>
+    
+    <p>
+        El métrodo find también puede recibir dos valores adicionales los cuales indican desde cuál y hasta cuál caracter se realizará la búsqueda: variable.find("caracter, palabra o frase",inicio,final). Si se copia solo el valor de inicio para la búsqueda el método trabajará igualmente, lo mismo pasa si colocamos un valor de final que excede el índice de la cadena en que buscamos, sin embargo estas dos últimas prácticas no son recomendable, no son una buena práctica.
+    </p>
+
+    <h3>
+        Método index
+    </h3>
+
+    <p>
+        Este método tiene exactamente las mismas características que el método find, la diferencia es que cuando no se encuentra el valor buscado en la cadena de caracteres, en lugar de retornar -1 como find, nos retorna un error que dice ValueError: Substring not found, que se traduce como valor de error: subcadena no encontrada, con subcadena se refiere a la palabra, letra o frase buscada dentro de la cadena. Pero al encontrar el elemento buscado nos dará los mismos resultados que el método find.
+    </p>
+
+    <p>
+        Otra diferencia importante es que cuando no se consigue un caracter con find() el programa retorna -1 pero sigue conrriendo, en cambio con index() el  programa detiene su ejecución pues se identifica que hay un error. Se rompe el código, como se dice coloquialmente
+    </p>
+
+    <h2>
+        Métodos que comienzan con is
+    </h2>
+
+    <p>
+        Estos métodos tienen la particularidad de que retornan verdadero o falso, a continuación mencionaremos varios de ellos.
+    </p>
+
+    <h3>
+        Método isalnum
+    </h3>
+
+    <p>
+        Este método verifica si todos los caracteres contenidos por una cadena son alfanuméricos (a-z, A-Z, 0-9), si es verdad retorna True, si no, retorna False.
+    </p>
+
+    <h3>
+        Método isalpha
+    </h3>
+    
+    <p>
+        Este método verifica si todos los caracteres contenidos por una cadena son alfabéticos, si es verdad retorna True, si no, retorna False.
+    </p>
+    
+    <h3>
+        Método isdecimal
+    </h3>
+    
+    <p>
+        Este método verifica si todos los caracteres contenidos por una cadena son decimales, si es verdad retorna True, si no, retorna False. Aunque el nombre parece decir que se trata de una cadena conformada por número decimal, en realidad en python los caracteres decimales son aquellos que se pueden usar para formar números en base 10, por ejemplo, U+0660, ARABIC-INDIC DIGIT ZERO. Formalmente, un carácter decimal es un carácter en la categoría general «Nd» de Unicode, esto dice la documentación, pero en sí, esto verifica que los caracteres de la cadena son número solamente, en caso de algún otro caracter que no sea un número esté presente en la cadena, retornará False.
+    </p>
+
+    <h3>
+        Método isdigit
+    </h3>
+    
+    <p>
+        Este método verifica si todos los caracteres contenidos por una cadena son digitos, en Python .os dígitos incluyen los caracteres decimales y dígitos que requieren un tratamiento especial, como por ejemplo los usados para superíndices. Esto incluye dígitos que no pueden ser usados para formar números en base 10, como los números Kharosthi. Formalmente, un dígito es un carácter que tiene la propiedad Numeric_Type definida como Digit o Decimal, esto dice la documentación.
+    </p>
+
+    <p>
+        Los métodos isdecimal y isdigit se diferencian porque isdecimal califica como False caracteres númericos que requieren un tratamiento especial, como los números para superíndice o subíndice por ejemplo, este tipo de caracteres no son decimales, y isdigit califica estos caracteres con tratamiento especial como True. En internet se afirma que el método isdecimal puede ser utilizado en objetos unicode.
+    </p>
+
+    <p>
+        Los métodos que comienzan con is son muy útiles cuando se comienza a trabajar con condicionales.
+    </p>
+
+    <h2>
+        Método lower() y upper()
+    </h2>
+
+    <P>
+        El método lower retorna una copia en minúsculas de la cadena de caracteres y upper retorna una copia en mayúsyúsculas de la cadena de caracteres. La sintaxis es como se explicó antes: cadena o variable.lower/upper(), "perro".upper(), por ejemplo, esto nos retornará "PERRO".
+    </P>
 </body>
 </html>
