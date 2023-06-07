@@ -17,5 +17,3 @@ print(type(valor_2))
 valor_4 = int(input("Ingresa un número: "))
 print(valor_4)
 print(type(valor_4))
-
-
