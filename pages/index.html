@@ -462,7 +462,49 @@
     </h2>
 
     <P>
-        El método lower retorna una copia en minúsculas de la cadena de caracteres y upper retorna una copia en mayúsyúsculas de la cadena de caracteres. La sintaxis es como se explicó antes: cadena o variable.lower/upper(), "perro".upper(), por ejemplo, esto nos retornará "PERRO".
+        El método lower retorna una copia en minúsculas de la cadena de caracteres y upper retorna una copia en mayúsculas de la cadena de caracteres. La sintaxis es como se explicó antes: cadena o variable.lower/upper(), "perro".upper(), por ejemplo, esto nos retornará "PERRO".
     </P>
+
+    <h2>
+        Recibiendo datos del usuarios
+    </h2>
+
+    <p>
+        Para ciertos programas, depender de instrucciones fijas no va a ser suficiente, alguna veces vamos a necesitar interactuar con el usuario para recibir datos y mostrar resultados, para esto utilizamos la función input() de python, esta función nos permite recibir datos del usuario y mostrarle un mensaje descriptivo para indicar qué tipo de dato estamos esperando. normalmente el valor ingresado por el usuario será asignado en una variable para poder trabajar con el en el programa.
+    </p>
+
+    <p>
+        La sintaxis es variable = input(mensaje), el mensaje debe ser escrito como una cadena de caracteres (es decir, entre comillas), variable = ("Ingresa un texto por favor"), por ejemplo. EL mensaje es opcional, sin embargo es recomendable para indicar al usuario qué tipo de valor se está esperando.
+    </p>
+
+    <p>
+        En el mensaje del input es recomendable utilizar dos puntos y un espacio (: ) para separar el lugar donde el usuario va a empezar a ingresar el valor.
+    </p>
+
+    <p>
+        Es importante tener en cuenta que la función input siempre retorna una cadena de caracteres, es decir que aunque el usuario ingrese un número, dicho número estará representado como una cadena de caracteres y no como un dato numérico, por lo que si queremos utilizar dicho valor en una operación aritmética, tendremos que convertir el valor al tipo de dato con el que queremos trabajar.
+    </p>
+
+    <p>
+        Para transformar un número ingresado al input a un dato numérico debemos utilizar la función int(), esta función convierte el valor retornado como cadena de caracteres en un dato numérico de entero, se puede transformar a otro tipo de dato pero en este caso usaremos int porque necesitamos es un entero.
+    </p>
+
+    <p>
+        Quedaría de la siguiente forma:
+    </p>
+
+    <p>
+        <code>
+            num = input("Ingrese un número: ")
+        </code>
+    </p>
+
+    <p>
+        <code>
+            num = int(input("Ingrese un número: "))
+        </code>
+    </p>
+
+
 </body>
 </html>

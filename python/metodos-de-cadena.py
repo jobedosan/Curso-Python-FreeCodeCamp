@@ -37,7 +37,7 @@ print(palabra.index("b",8))
 
 print(palabra.index("b",8,72))
 
-#Las siguiente líneas nos mostrará la diferencia entre find() e index(), si se descomentan las siguientes dos líneas y se colocan al comienzo crearán el error que solo se muestra con index() y no con find(), y el programa se detendrá
+#Las siguiente líneas nos mostrará la diferencia entre find() e index(), si se descomentan las siguientes dos líneas y se colocan al comienzo creará el error que solo se muestra con index() y no con find(), y el programa se detendrá
 nombre = "Benjamin"
 #print(nombre.index("perro"))
 
