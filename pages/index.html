@@ -663,5 +663,85 @@
     <p>
         Además del orden mencionado anteriormente es relevante recordar que las operaciones  se evalúan de izquierda a derecha. Es importante recordar esto para cuando existan dos operaciones que tienen el mismo nivel de importancia o precedencia.
     </p>
+
+    <h2>
+        Operadores lógicos
+    </h2>
+
+    <p>
+        Los operadores lógicos nos permiten trabajar con valores booleanos (True y False). Los tres valores lógicos que podemos usar en python son: and, or o not. Cada uno de ellos tiene sus propias reglas específicas y nos van a permitir formar expresiones más complejas que siguen las reglas de la lógica
+    </p>
+
+    <h3>
+        Operador and
+    </h3>
+
+    <p>
+        Este operador evalúa si el operando izquierdo y el derecho son verdaderos, y dependiendo de eso retorna verdadero o falso. Digamos que tenemos dos expresiones llamadas X y Y, al utilizar el operador and, evaluaremos si las expresiones X y Y son True o False, si son True el programa retornará True y en caso contrario retornará False. Igualmente las reglas del operador and son las que se muestran en la siguiente tabla.
+    </p>
+
+    <img src="../img/Operador-and-reglas.png" alt="Reglas del operador and" title="Reglas del operador and" style="width: 25%;">
+
+    <p>
+        La tabla se denomina tabla de verdad o Trueth Table en inglés, la tabla establece lo siguiente: 
+    </p>
+
+    <ul>
+        <li>Si ambos operandos unidos por el operador and son True, el resultado será True </li>
+        <li>Si uno de los operandos es False o ambos son False, el resultado será False</li>
+    </ul>
+
+    <p>
+        Un ejemplo de expresiones sencillas a evaluar con and puede ser el siguiente: (5 &lt; 6) and (6 &gt; 8). Acá hay una expresión que evalúa si cinco es menor que seis, como es correcta esa expresión es True, la segunda expresion evalúa si seis es mayor que ocho, como es incorrecta esa expresión en False. En conjunto ambas expresiones unidas por el operador and nos retornarán False, por lo que se explicó en las reglas reflejadas en la tabla de verdad. 
+    </p>
+
+    <h3>
+        Operador or
+    </h3>
+
+    <p>
+        Este operador también nos permite conecar dos expresiones y dependiendo del valor de cada expresión, obtendremos un valor de True o False para la expresión completa. Veremos a continuación la tabla de verdad de este operador y una breve explicación.
+    </p>
+
+    <img src="../img/Operador-or-reglas.png" alt="Reglas del operador or" title="Reglas del operador or" style="width: 25%;">
+
+    <ul>
+        <li>Si ambos operandos unidos por el operador or son True, el resultado será True</li>
+        <li>Si uno de los operandos es False, el resultado será True</li>
+        <li>Si ambos operandos son False, el resultado será False</li>
+    </ul>
+
+    <p>
+        En resumen, cuando uno o ambos operandos son True, el resultado es True.
+    </p>
+
+    <p>
+        Un ejemplo de expresiones sencillas a evaluar con or puede ser el siguiente: (5 &lt; 6) or (6 &gt; 8). Acá hay una expresión que evalúa si cinco es menor que seis, como es correcta esa expresión es True, la segunda expresion evalúa si seis es mayor que ocho, como es incorrecta esa expresión en False. En conjunto ambas expresiones unidas por el operador or nos retornarán True, por lo que se explicó en las reglas reflejadas en la tabla de verdad. 
+    </p>
+
+    <h3>
+        Operador not
+    </h3>
+
+    <p>
+        Este operador es utilizado para negar el valor de una expresión, a constinuación veremos la tabla de verdad del operador not y una breve explicación.
+    </p>
+
+    <img src="../img/Operador-not-reglas.png" alt="Reglas del operador not" title="Reglas del operador not" style="width: 25%;">
+
+    <ul>
+        <li>Si la expresión es True, el resultado será False </li>
+        <li>Si la expresión es False, el resultado será True </li>
+    </ul>
+
+    <p>
+        Un ejemplo sencillos del funcionamiento de not puede ser: not True, que nos retornará False o no False que nos retornará True. También puede ser (5 &lt; 6), lo cual es True, así que con el operador not nos retornará False.
+    </p>
+
+    <p>
+        Todos estos operadores lógicos son muy importantes al trabajar con expresiones condicionales, con ciclos o bucles. En cuanto a prioridad el operador not tiene mayor prioridad, cuando tenemos una expresión con multiples operadores lógicos, la prioridad va a ser importante. Primero se evalúan las operaciones not, luego las and y por último las or. Si la expresión tiene varios operadores iguales, se evaluarán los mismos de izquierda a derecha.
+    </p>
+
+    <img src="../img/Prioridad-or-not-and.png" alt="Prioridad de operadores lógicos" title="Prioridad de operadores lógicos" style="width: 25%;">
 </body>
 </html>
