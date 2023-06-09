@@ -743,5 +743,124 @@
     </p>
 
     <img src="../img/Prioridad-or-not-and.png" alt="Prioridad de operadores lógicos" title="Prioridad de operadores lógicos" style="width: 25%;">
+
+    <h2>
+        Operadores relacionales
+    </h2>
+
+    <p>
+        Estos son utilizados para comparar valores y retornan un valor booleano. Para utilizarlos copiamos un valor, operador y otro valor: 5 > 59, por ejemplo.
+    </p>
+
+    <h3>
+        Operador mayor que (&gt;)
+    </h3>
+    
+    <p>
+        Este operador retorna True si el operando de la izquierda es mayor que el de la derecha, en caso contrario retorna False. En sí evalúa si el operando de la izquierda es mayor que el de la derecha.
+    </p>
+
+    <h3>
+        Operador mayor o igual que (&gt;=)
+    </h3>
+    
+    <p>
+        Este operador retorna True si el operando de la izquierda es mayor o igual que el de la derecha, en caso contrario retorna False. En sí evalúa si el operando de la izquierda es mayor o igual que el de la derecha.
+    </p>
+    
+    <h3>
+        Operador menor que (&lt;)
+    </h3>
+    
+    <p>
+        Este operador retorna True si el operando de la izquierda es menor que el de la derecha, en caso contrario retorna False. En sí evalúa si el operando de la izquierda es menor que el de la derecha.
+    </p>
+
+    <h3>
+        Operador menor o igual que (&gt;=)
+    </h3>
+    
+    <p>
+        Este operador retorna True si el operando de la izquierda es menor o igual que el de la derecha, en caso contrario retorna False. En sí evalúa si el operando de la izquierda es menor o igual que el de la derecha.
+    </p>
+
+    <h3>
+        Operador igual que (==)
+    </h3>
+
+    <p>
+        Este operador retorna True si el operando de la izquierda es igual al de la derecha. Se utilizan dos signos de igual (==) ya que el signo de igual solo (=) es un operador de asignación, lo usamos para asignar valores a las variables, el doble signo igual es para comparar valores. 
+    </p>
+
+    <h3>
+        Operador diferente que (!=)
+    </h3>
+
+    <p>
+        Este operador retorna True si el operando de la izquierda es diferente al de la derecha, en caso contrario, retornará False. 
+    </p>
+
+    <h3>
+        Operadores relacionales y cadenas de caracteres
+    </h3>
+
+    <p>
+        Los operador relacionales pueden utilizarse para comparar cadenas de caracteres, el operador es utilizado para comparar cadenas de caracteres y saber si son iguales.
+    </p>
+
+    <p>
+        <code>
+            "perro" == "perro" = True
+        </code>
+    </p>
+
+    <p>
+        Los operadores mayor que y menor que comparan el orden lexicográfico o alfabético. Si el operando de la derecha aparece antes en orden alfabético y usamos el operador menor que, retornará True, en caso contrario retornará False. Usarán la lógica de un diccionario.
+    </p>
+
+    <p>
+        <code>
+            A &gt; B = False    
+        </code>
+        <br>
+        <code>
+            A &lt; B = True    
+        </code>
+    </p>
+
+    <p>
+        Cuando utilizamos menor que y la cadena de la izquierda tiene una longitud mayor, retornará False, en caso contrario retornará False. Es como si comparara el tamaño de las cadenas en este caso.
+    </p>
+
+    <p>
+        <code>
+            "ABC" &lt; "A" = False    
+        </code>
+        <br>
+        <code>
+            "ABC" &gt; "A" = True    
+        </code>
+    </p>
+
+    <p>
+        El operador diferente que funciona igual que con los números, retorna True si las cadenas comparadas son diferentes.
+    </p>
+
+    <p>
+        <code>
+            "Perro" != "Perro" = False
+        </code>
+    </p>
+    
+    <p>
+        Es importante tener en cuenta que los operadores igual que y diferente que toman en cuenta las mayúsculas, si comparamos dos palabras que se leen igual pero están escritas de forma distinta por mayúsculas o minúsculas, esto afectará el retorno.
+    </p>
+    
+    <p>
+        <code>
+            "Perro" != "perro" = True
+            "Perro" == "perro" = False
+        </code>
+    </p>
 </body>
 </html>
