@@ -990,6 +990,116 @@
             variable = 0
         </code>
     </p>
-        
+
+
+    <h2>
+        Sentencias condicionales
+    </h2>
+
+    <p>
+        Una sentenia condicional es una instrucción o un grupo de instrucciones cuya ejecución depende del valor de una condición booleana.
+    </p>
+
+    <P>
+        A continuación se muestra el la lógica básica de un condicional, tenemos una condición que definimos en el programa, si dicha condición es False, no ocurre nada, el programa consitnúa su ejecución más allá del condicional. Pero si es True, una secuencia de instrucciones que estaban condicionadas por la condición se van a ejecutar, y luego de haber terminado su ejecución, el  programa seguirá su ejecución normal.
+    </P>
+
+    <img src="../img/lógica-básica-condicional.png" alt="Lógica básica de un condicional" title="Lógica básica de un condicional" width="40%">
+
+    <h3>
+        Condicional if
+    </h3>
+
+    <p>
+        La sintaxis de una condicional se basa en la palabra if, espacio, condición, dos puntos (:), código a ejecutar, como se puede ver en la siguiente imagen. La palabra if significa si, si en forma condicional, por ejemplo, "si llueve hoy, haré tal cosa". Los dos puntos son muy importantes porque si no se colocan el programa retornará un error. además de esto, el código a ejecutar si se cumple la condición, tiene que estar indentado, la indentación es crear distintos niveles de espacio ene el código. Es muy importante porque permite a pyhton reconocer qué código está condicionado y qué código forma parte del programa principal, la indentación son 4 espacios, o se puede hacer presionando una vez la tecla tab.
+    </p>
+
+    <img src="../img/condición-if-sintaxis.png" alt="sintaxis del if" title="sintaxis del if" width="40%">
+
+    <p>
+        A continuación se muestra una condicional que evalúa si el valor de temperatura es estrictamente menor que 25, si es así se imprime por consola la palabra frío.
+    </p>
+
+    <img src="../img/condicional-que-se-ejecuta.png" alt="condicional que se ejecuta" title="condicional que se ejecuta" width="40%">
+
+    <p>
+        En caso contrario el programa no imprimirá nada por consola, como se ve en la siguiente imagen.
+    </p>
+
+    <img src="../img/condicional-que-no-se-ejecuta.png" alt="condicional que no se ejecuta" title="condicional que no se ejecuta" width="40%">
+
+    <h3>
+        Cláusula 'else'
+    </h3>
+
+    <p>
+        Ya sabemos qué ocurrirá si se cumple la condición, pero ¿qué pasa si no se cumple dicha condición?. La palabra else es equivalente a decir "si llueve hoy, haré tal cosa, si no, haré otra cosa".
+    </p>
+
+    <p>
+        La lógica básica de un condicional con la cláusula else se puede ver en la siguiente imagen, tenemos una condición, si la condición es True, se ejecutarán una secuencia de instrucciones. Si la condición es False, se ejecutará la cláusula else, es decir, el código que escribimos como parte de esa cláusula. Después de haberse ejecutado cualquiera de los dos grupos de instrucciones se continúa ejecutando el programa, más allá del condicional.
+    </p>
+
+    <img src="../img/lógica-de-condicional-con-else.png" alt="lógica de condicional con else" title="lógica de condicional con else" width="40%">
+    
+    <p>
+        La sintaxis te un condicional if con una cláusula else es la que se puede ver en la siguiente imagen, la nueva parte agregada está resaltada de color amarillo.
+    </p>
+
+    <img src="../img/if-else-sintaxis.png" alt="sintaxis de condicional if con else" title="sintaxis de condicional if con else" width="40%">
+
+    <p>
+        A continuación se puede ver cómo funciona el if else, la condicional verifica si el valor de la variable temp es menor que 25, como lo es, el resultado es True y ejecuta el código escrito en el if.
+    </p>
+
+    <img src="../img/ejemplo-if-else.png" alt="Ejemplo de if con cláusula else" title="Ejemplo de if con cláusula else" width="40%">}
+
+    <p>
+        En cambio si el valor de la variable diera como resultado False, se ejecutaría el código escrito en la cláusula else, como se puede ver en la siguiente imagen.
+    </p>
+
+    <img src="../img/ejemplo-if-else-false.png" alt="Ejemplo de if con cláusula else ejecutada" title="Ejemplo de if con cláusula else ejecutada" width="40%">
+
+    <h3>
+        Cláusula 'elif'
+    </h3>
+
+    <p>
+        Esta cláusula nos permite especificar otras condiciones aparte de la establecida por el if, y cómo manejar dichas condiciones. Podemos ver un ejemplo de la sintaxis de la condicional con elif en la siguiente imagen. En el ejemplo se ve la siguiente ejecución, si la condición 1 se cumple se ejecutará el código del if, en caso contrario el programa pasará a verificar si se cumple la segunda condición, si se cumple se ejecuta el código de la cláusula elif, si no se cumple, se ejecutará el código escrito en la cláusula else. Solo se ejecutará un bloque de código se va a ejecutar, el código que corresponda a la condición que se cumpla.
+    </p>
+
+    <img src="../img/if-else-elif-sintaxis.png" alt="Condicional if con elif" title="Condicional if con elif" width="40%">
+
+    <p>
+        A continuación veremos un ejemplo de una condicional con elif y else, la siguiente imagen muestra cuando se ejecutaría la primera línea del condicional, es decir el bloque del if.
+    </p>
+
+    <img src="../img/if-elif-else-primera-línea-ejecutada.png" alt="Primera línea ejecutada" title="Primera línea ejecutada" width="40%">
+
+    <p>
+        En la siguiente imagen se muestra cómo se ejecutaría la segunda línea del condicional, es decir, el bloque de código del elif.
+    </p>
+
+    <img src="../img/if-elif-else-segunda-línea-ejecutada.png" alt="Segunda línea ejecutada" title="Segunda línea ejecutada" width="40%">
+    <p>
+
+        En la siguiente imagen se muestra cómo se ejecutaría la tercera línea del condicional, es decir, el bloque de código del else.
+    </p>
+
+    <img src="../img/if-elif-else-tercera-línea-ejecutada.png" alt="tercera línea ejecutada" title="tercera línea ejecutada" width="40%">
+
+    <p>
+        Es importante recordar que puede haber más de una cláusula 'elif', pero solo una cláusula 'else', porque la cláusula 'else' sirve como un respaldo en caso de que ninguna de las condiciones se cumpla. La cláusula else es la última siempre.
+    </p>
+
+    <p>
+        En la siguiente imagen podemos ver un ejemplo de una condicional con varias cláusulas 'elif'.
+    </p>
+
+    <img src="../img/condicional-con-varios-elif.png" alt="Condicional con varias cláusulas elif" title="Condicional con varias cláusulas elif" width="40%">
+
+    <p>
+        También es importante que en cada línea de las condiciones debemos agregar dos puntos (:), en caso contrario el programa retornará un error de sintaxis.
+    </p>
 </body>
 </html>
