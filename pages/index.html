@@ -1228,9 +1228,9 @@
 
     <img src="../img/insert-ejemplo.png" alt="Ejemplo del método insert" title="Ejemplo del método insert" width="40%">
 
-    <h4>
+    <h3>
         Remover elemento de una lista
-    </h4>
+    </h3>
 
     <p>
         Para remover un elemento en de la lista debemos utilizar el método .remove la sintaxis para su uso es la siguiente: lista.remove (elemento). Copiamos el nombre de la lista con el método remove y dentro de sus paréntesis colocamos el elemento a remover de la lista.
@@ -1248,9 +1248,9 @@
 
     <img src="../img/error-con-remove.png" alt="Error de valor" title="Error de valor" width="40%">
 
-    <h4>
+    <h3>
         Verificar la existencia de un elemento en una lista
-    </h4>
+    </h3>
 
     <p>
         Para verificar si un elemento está presente en una lista, debemos utilizar el operador in, la sintaxis para esto es la siguiente: elemento in lista. Si el elemento está en la lista el resultado va a ser True, en caso contrario el resultado será False. Esto lo podemos usar como parte de un condicional para ejecutar un código solamente si un elemento específico está en la lista
@@ -1262,9 +1262,9 @@
 
     <img src="../img/operador-in-ejemplo.png" alt="Ejemplo de operador in" title="Ejemplo de operador in" width="40%">
 
-    <h4>
+    <h3>
         Método .index() en las listas
-    </h4>
+    </h3>
 
     <p>
         Este método que es muy útil cuando trabajamos con listas es el método index(), este retorna el índice de la primera ocurrencia del elemento en la lista. Si no se encuentra el elemento ocurre un error. Podemos ver su funcionamiento en la siguiente imagen.
@@ -1278,9 +1278,9 @@
 
     <img src="../img/index-lista-error-ejemplo.png" alt="Error al no conseguir elemento en lista" title="Error al no conseguir elemento en lista" width="40%">
 
-    <h4>
+    <h3>
         Cambiar elemento de una lista
-    </h4>
+    </h3>
 
     <p>
         Como las listas son mutables. Sus elementos pueden ser modificados. Para cambiar o actualizar un valor de una lista tebemos utilizar la siguiente sintaxis: lista[] = nuevo elemento. En la siguiente imagen se muestra un ejemplo más práctico, donde cambiamos el valor 1 de la lista por el valor -8.
@@ -1337,5 +1337,77 @@
     <p>
         Este método reordena la lista de forma específica, ascendente o descendente, por defecto ordena la lista en orden alfabético, pero se puede colocar el orden inverso si como parámetro pasamos reverse = True. Por defecto ordena los números en orden ascendente de izquierda a derecha, también se puede aplicar el parámetro reverse para lograr un orden inverso. También se puede pasar como parámetro una función que permita ordenar los elementos según características específicas, como la cantidad de caracteres por ejemplo. Pueden verse ejemplos y explicaciones más claras en el siguiente enlace: <a href="https://www.w3schools.com/python/ref_list_sort.asp">Método sort</a>.
     </p>
+
+    <h2>
+        Tuplas
+    </h2>
+
+    <p>
+        Las tuplas son muy parecidas a las listas, pero tienen una diferencia visual y otra funcional. En inglés se denominan tuples. Una tupla es una estructura de datos inmutable que contiene una secuencia ordenada de elementos. La diferencia visual es las tuplas en relación a las listas es que sus elementos están rodeados por paréntesis, al igual que los elementos de la lista, estos estarán separados por una coma y un espacio (, ). 
+    </p>
+
+    <img src="../img/tupla-ejemplo.png" alt="Ejemplo de tupla" title="Ejemplo de tupla" width="40%">
+    
+    <p>
+        Son secuencia ordenadas al igual que las listas, cada uno de sus elementos está ubicado en un índice específico.
+    </p>
+    
+    <img src="../img/tupla-indice-ejemplo.png" alt="Ejemplo de tupla e índice" title="Ejemplo de tupla e índice" width="40%">
+
+    <p>
+        Sus características principales son las siguientes:
+    </p>
+
+    <img src="../img/tuplas-caracteristicas.png" alt="Caracteristicas principales de las tuplas" title="Caracteristicas principales de las tuplas" width="40%">
+
+    <p>
+        Cómo las tuplas no pueden cambiar, van a ser muy útiles cuando necesitemos una estructura de datos que no pueda ser alterada o modificada durante la ejecución del programa, esto nos permite proteger la data mejor si queremos que nada en la estructura de datos sea modificado por error.
+    </p>
+
+    <p>
+        Si tratamos de modificar uno de los elementos de una tupla, el programa nos retornará un error, indicando que no se puede asignar un nuevo elemento a la tupla.
+    </p>
+
+    <img src="../img/error-tupla.png" alt="Error al modificar tupla" title="Error al modificar tupla" width="40%">
+
+    <h3>
+        Acceder a un elemento de la tupla
+    </h3>
+
+    <p>
+        Para acceder a un elemento de la tupla podemos utilizar su índice, ya que son una secuencia ordenada como las listas. Para esto debemos escribir el nombre de la tupla y el índice del elemento al que queremos acceder dentro de un corchete ([]).
+    </p>
+
+    <img src="../img/acceso-elemento-tupla-ejemplo.png" alt="Acceso a elemento de tupla" title="Acceso a elemento de tupla" width="100%">
+
+    <h3>
+        Encontrar un elemento en la tupla
+    </h3>
+
+    <p>
+        Podemos encontrar el elemento de una tupla utilizando el operador in, exactamente igual que como hacíamos con las listas. Se puede ver un ejemplo de su funcionamiento en la siguiente imagen.
+    </p>
+
+    <img src="../img/encontrar-elemento-tupla.png" alt="Operador in con tuplas" title="Operador in con tuplas" width="40%">
+
+    <h3>
+        Método index usado con tuplas
+    </h3>
+
+    <p>
+        Una de las dos principales operaciones que podemos realizar con las tuplas es encontrar el índice en donde está ubicado un elemento, o la primera ocurrencia de ese elemento en la tupla. Esto lo hacemos por medio del método index(). Si tratamos de encontrar un elemento inexistente en la tupla por medio del método index, el programa nos retornará un error.
+    </p>
+
+    <img src="../img/error-index-tupla.png" alt="Error al usar index en tupla" title="Error al usar index en tupla" width="40%">
+
+    <h3>
+        Método count usado con tuplas
+    </h3>
+
+    <p>
+        La segunda operación importante que podemos realizar con las tuplas es la operación count, que nos permite saber el número de ocurrencias de un elemento en la tupla.
+    </p>
+
+    <img src="../img/count-con-tuplas.png" alt="Método count usado con tupla" title="Método count usado con tupla" width="40%">
 </body>
 </html>
