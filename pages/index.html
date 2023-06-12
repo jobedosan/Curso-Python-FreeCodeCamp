@@ -1101,5 +1101,241 @@
     <p>
         También es importante que en cada línea de las condiciones debemos agregar dos puntos (:), en caso contrario el programa retornará un error de sintaxis.
     </p>
+
+    <h2>
+        Comentarios
+    </h2>
+
+    <p>
+        Los comentarios son muy importantes para escribir código de calidad y para explicar lo que queremos hacer con nuestro código. Un comentario es básicamente texto que se escribe en el programa para facilitar su comprensión. Los comentarios no son parte del código, ellos están allí para ser leídos por los humanos, cuando un programa se ejecuta esos comentarios no son considerados parte del código y no lo afectan de ninguna forma.
+    </p>
+
+    <p>
+        El propósito principal de los comentarios es describir la lógica de ciertas partes del código a  otros programadores que lean el programa, o incluso para nosotros mismos entender la lógica que usamos al implementar partes del código. En python un comentarios se realiza con el símbolo de numeral (#) seguido del texto del comentario, el numeral debe estar al inicio de la línea.
+    </p>
+
+    <p>
+        Algo a evitar es comentar en exceso, este es un error muy común al aprender a programar, comentar en exceso puede hacer que el código sea más difícil de leer si los comentarios contienen descripciones que se pueden interpretar muy fácilmente a través del código. Debemos asumir que el desarrollador que está leyendo nuestro código ya sabe programar en nuestro lenguaje y nuestros comentarios solo deben agregar detalles extras o detalles importantes para explicar partes complejas del código. no comentar solo por comentar o describir el código, a continuacion se muestra un ejemplo de cómo sería un código con comentarios en exceso.
+    </p>
+
+    <img src="../img/comentarios-en-exceso.png" alt="Comentarios en exceso" title="Comentarios en exceso">
+
+    <p>
+        Debemos evitar comentarios redundantes o que describan algo que sea obvio en el código. Pero los comentarios bien utilizados son una herramienta poderosísima para escribir buen código
+    </p>
+
+    <h2>
+        Listas
+    </h2>
+
+    <p>
+        Las listas son un tipo de estructura de datos que ya viene predeterminado en el lenguaje de programación y que podemos utilizar muy fácilmente. Las listas son una estructura de datos utilizada para almacenar múltiples valores en secuencia. En la siguiente imagen podremos ver cómo luce una lista en python, la lista de la imagen está conformada por 4 números, los números son los elementos de la lista, pero una lista puede contener valores de cualquier tipo de dato. La caracterítica visual principal de una lista es que está definida o rodeada por corchetes ([]). Los corchetes son obligatorios para definir una lista en python.
+    </p>
+    
+    <img src="../img/característica-visual-listas.png" alt="Característica visual de las listas" title="Característica visual de las listas" width="40%">
+
+    <p>
+        Los elementos de una lista en python son separados por medio de una coma (,) y un espacio.
+    </p>
+
+    <p>
+        Una lista puede tener contener cadenas de caracteres y cualquier otro tipo de valor, incluso valores de distintos tipos, estos valores son secuencias ordenadas. 
+    </p>
+
+    <img src="../img/secuencia-ordenada-lista.png" alt="Secuencia ordenada" title="Secuencia ordenada" width="40%">
+
+    <p>
+        Es una secuencia ordenada porque cada uno de sus elementos está ubicado en un índice específico, exactamente igual que los caracteres de una cadena de caracteres. En el índice 0 está el primer elemento, en el índice 1 está el segundo elemento, en el índice 2 está el tercer elemento y así sucesivamente.
+    </p>
+
+    <img src="../img/lista-indice.png" alt="Índices en la lista" title="Índices en la lista">
+
+    <p>
+        No se llama secuencia ordenada porque la lista esté ordenada en un orden específico, sino que cada uno de sus elementos tiene su propio lugar en la secuencia.
+    </p>
+
+    <p>
+        Veremos las características de una lista en la siguiente lista.
+    </p>
+
+    <ul>
+        <li>
+            Es una secuencia ordenada de valores.
+        </li>
+        <li>
+            Puede contener valores de cualquier tipo (enteros, números en coma flotante, cadenas de caracteres, otras listas, e incluso valores de otros tipos o estructuras de datos que trataremos más adelante).
+        </li>
+        <li>
+            Puede contener valores de distintos tipos, es decir, tipos de valores mezclados
+        </li>
+        <li>
+            Cada posición en la lista está asociada a un entero llamado "índice".
+        </li>
+        <li>
+            Es mutable. Puede ser modificada.
+        </li>
+    </ul>
+
+    <h3>
+        Cómo acceder a un elemento
+    </h3>
+
+    <p>
+        Cuando definimos una lista, la asignamos a una variable, y luego podemos usar esa variable para acceder a un elemento específico de la lista. Para acceder a un elemento de la lista, usamos su índice correspondiente. Para esto utilizamos la siguiente sintaxis. Es muy parecida a la sintaxis que usamos para indexar cadenas de caracteres.
+    </p>
+
+    <img src="../img/sintaxis-acceso-a-elemento-lista.png" alt="Acceso a elemento de lista" title="Acceso a elemento de lista">
+
+    <p>
+        En la siguiente imagen podemos ver un ejemplo del acceso a los elementos de una lista.
+    </p>
+
+    <img src="../img/acceso-elemento-lista-ejemplo.png" alt="Ejemplo de acceso a elemento de una lista" title="Ejemplo de acceso a elemento de una lista">
+
+    <h3>
+        Cómo agregar a un elemento
+    </h3>
+
+    <p>
+        También podemos agregar nuevos elementos a una lista porque son mutables, hay dos formas de agregar este elemento nuevo, al final de la lista o en un índice específico.
+    </p>
+
+    <h4>
+        Agregar elemento a la lista como último valor
+    </h4>
+
+    <p>
+        Para agregar un elemento al final de la lista debemos utilizar el método .append(), la sintaxis para su uso es la siguiente: lista.append(elemento). Copiamos el nombre de la lista con el método append y dentro de sus paréntesis colocamos el elementos a agregar como último elemento de la lista. 
+    </p>
+
+    <p>
+        En el siguiente ejemplo se puede ver una lista conformada por los valores 1, 2, 3 y 4, y luego se le agrega el valor 5 por medio del método append.
+    </p>
+
+    <img src="../img/append-ejemplo.png" alt="Ejemplo del método append" title="Ejemplo del método append" width="40%">
+    
+    <h4>
+        Agregar elemento a la lista en un índice específico
+    </h4>
+
+    <p>
+        Para agregar un elemento en un índice específico de la lista debemos utilizar el método .insert, la sintaxis para su uso es la siguiente: lista.insert(índice, elemento). Copiamos el nombre de la lista con el método insert y dentro de sus paréntesis colocamos el índice dónde ubicaremos el nuevo elemento, separado por una coma (,) del elemento nuevo.
+    </p>
+
+    <p>
+        En el siguiente ejemplo se puede ver una lista conformada por los valores 1, 2, 3, 4 y 5, y agregamos el valor 6 e el índice 0 por medio del método insert.
+    </p>
+
+    <img src="../img/insert-ejemplo.png" alt="Ejemplo del método insert" title="Ejemplo del método insert" width="40%">
+
+    <h4>
+        Remover elemento de una lista
+    </h4>
+
+    <p>
+        Para remover un elemento en de la lista debemos utilizar el método .remove la sintaxis para su uso es la siguiente: lista.remove (elemento). Copiamos el nombre de la lista con el método remove y dentro de sus paréntesis colocamos el elemento a remover de la lista.
+    </p>
+
+    <p>
+        En el siguiente ejemplo podemos ver una lista conformada por los valores 1, 2, 3, 4, 5 y 4, y removemos el elemento 4 por medio del método remove. Es importante mencionar que en este caso el número 4 aparece dos veces, cuando esto ocurra, el método remove solo removerá la primera aparición del valor 4, y el último se mantendrá. Así podremos ir removiendo los elementos que necesitamos.
+    </p>
+
+    <img src="../img/remove-ejemplo.png" alt="Ejemplo del método remove" title="Ejemplo del método remove" width="40%">
+
+    <p>
+        Si tratamos de remover un elemento que no existe en la lista, el programa nos retornará un error de valor, como se puede ver en el siguiente ejemplo, donde tratamos de remover el valor 9 de una lista que no lo contiene.
+    </p>
+
+    <img src="../img/error-con-remove.png" alt="Error de valor" title="Error de valor" width="40%">
+
+    <h4>
+        Verificar la existencia de un elemento en una lista
+    </h4>
+
+    <p>
+        Para verificar si un elemento está presente en una lista, debemos utilizar el operador in, la sintaxis para esto es la siguiente: elemento in lista. Si el elemento está en la lista el resultado va a ser True, en caso contrario el resultado será False. Esto lo podemos usar como parte de un condicional para ejecutar un código solamente si un elemento específico está en la lista
+    </p>
+
+    <p>
+        En la siguiente imagen podemos ver un ejemplo claro del funcionamiento del operador in.
+    </p>
+
+    <img src="../img/operador-in-ejemplo.png" alt="Ejemplo de operador in" title="Ejemplo de operador in" width="40%">
+
+    <h4>
+        Método .index() en las listas
+    </h4>
+
+    <p>
+        Este método que es muy útil cuando trabajamos con listas es el método index(), este retorna el índice de la primera ocurrencia del elemento en la lista. Si no se encuentra el elemento ocurre un error. Podemos ver su funcionamiento en la siguiente imagen.
+    </p>
+
+    <img src="../img/index-lista-ejemplo.png" alt="Ejemplo del método index con listas" title="Ejemplo del método index con listas" width="40%">
+
+    <p>
+        Si intentamos ubicar un elemento dentro de una lista y dicho elemento no existe se producirá el siguiente error.
+    </p>
+
+    <img src="../img/index-lista-error-ejemplo.png" alt="Error al no conseguir elemento en lista" title="Error al no conseguir elemento en lista" width="40%">
+
+    <h4>
+        Cambiar elemento de una lista
+    </h4>
+
+    <p>
+        Como las listas son mutables. Sus elementos pueden ser modificados. Para cambiar o actualizar un valor de una lista tebemos utilizar la siguiente sintaxis: lista[] = nuevo elemento. En la siguiente imagen se muestra un ejemplo más práctico, donde cambiamos el valor 1 de la lista por el valor -8.
+    </p>
+
+    <img src="../img/cambio-elemento-lista.png" alt="Cambio de elemento en una lista" title="Cambio de elemento en una lista" width="40%">
+
+    <h2>
+        Métodos de las listas 
+    </h2>
+
+    <p>
+        Los métodos de las listas son operaciones comunes de listas que ya están implementadas en Python. Podemos ver la sintaxis de estos métodos en la siguiente imagen, sin embargo es importante mencionar que algunos de ellos no necesitan un parámetro, por lo que el paréntesis será suficiente.
+    </p>
+
+    <img src="../img/método-listas-sintaxis.png" alt="Sintaxis para los métodos de lista" title="Sintaxis para los métodos de lista" width="40%">
+
+    <h3>
+        Método .count(elemento)
+    </h3>
+
+    <p>
+        Este método nos retorna la cantidad de veces que se repite un elemento en una lista.
+    </p>
+
+    <h3>
+        Método .extend(lista)
+    </h3>
+
+    <p>
+        Este método nos permite extender la lista agregando otra lista (la integra como última parte de la lista).
+    </p>
+
+    <h3>
+        Método .pop()
+    </h3>
+
+    <p>
+        Este método elimina un elemento y lo retorna por consola.
+    </p>
+
+    <h3>
+        Método .reverse()
+    </h3>
+
+    <p>
+        Este método retorna la lista en un orden invertido.
+    </p>
+
+    <h3>
+        Método .sort()
+    </h3>
+
+    <p>
+        Este método reordena la lista de forma específica, ascendente o descendente, por defecto ordena la lista en orden alfabético, pero se puede colocar el orden inverso si como parámetro pasamos reverse = True. Por defecto ordena los números en orden ascendente de izquierda a derecha, también se puede aplicar el parámetro reverse para lograr un orden inverso. También se puede pasar como parámetro una función que permita ordenar los elementos según características específicas, como la cantidad de caracteres por ejemplo. Pueden verse ejemplos y explicaciones más claras en el siguiente enlace: <a href="https://www.w3schools.com/python/ref_list_sort.asp">Método sort</a>.
+    </p>
 </body>
 </html>
