@@ -159,7 +159,11 @@
         </p>
         
         <p>
-            La frase hola mundo es muy común en el mundo de la programación, por lo que se utilizó para nuestro primer programa, para poder ejecutar el archivo Python debemos guardarlo antes y luego de esto en la parte superior podremos ver donde fue guardado incluso. Al ejecutar el archivo podremos ver el texto "¡Hola, Mundo!" mostrado en un color azul por la consola interactiva. Los elementos de color azul mostrado en la consola interactiva, siempre serán resultados de ejecutar nuestro archivo (se muestra en azul si se mantienen los colores originales de la consola). Si se estableció el color oscuro el texto será blanco.
+            La frase hola mundo es muy común en el mundo de la programación, por lo que se utilizó para nuestro primer programa, para poder ejecutar el archivo Python debemos guardarlo antes y luego de esto en la parte superior podremos ver donde fue guardado incluso. Al ejecutar el archivo podremos ver el texto "¡Hola, Mundo!" mostrado en un color azul por la consola interactiva. Los elementos de color azul mostrado en la consola interactiva, siempre serán resultados de ejecutar nuestro archivo (se muestra en azul si se mantienen los colores originales de la consola). Si se estableció el color oscuro el texto será blanco. 
+        </p>
+
+        <p>
+            Ver archivo <a href="../python/1. hola.mundo.py">1. hola.mundo.py</a> para ver programa.
         </p>
     </section>
 
@@ -215,6 +219,8 @@
         <p>
             La consola interactiva nos arrojará como resultado el número 7, ya que se sumó el número 2 al valor contenido por la variable, es decir, 5.
         </p>
+
+        Ver archivo <a href="../python/2. creacion-variable.py">2. creacion-variable.py</a> para ver programa.
     </section>
 
     <hr>
@@ -325,6 +331,10 @@
         <p>
             Un número como entero podrá ser utilizado en operaciones aritméticas como suma, resta, multiplicación, división, etc. Y el mismo valor como cadena de caracteres solo podrá ser utilizada como una cadena de texto tradicional.
         </p>
+
+        <p>
+            Ver archivo <a href="../python/3. tipo-de-datos.py">3. tipo-de-datos.py</a> para ver programa.
+        </p>
     </section>
 
     <hr>
@@ -355,6 +365,10 @@
         </p>
         
         <img src="../img/rejilla de la cadena de caracteres.png" alt="índice de una cadena de caracteres" title="índice de una cadena de caracteres">
+
+        <p>
+            Ver archivo <a href="../python/4. funcion-len.py">4. funcion-len.py</a> para ver programa.
+        </p>
     </section>
 
     <hr>
@@ -374,6 +388,10 @@
         
         <p>
             Es importante mencionar que el espacio también cuenta como caracter, por lo que se toma en cuenta al momento de contar el indice en una cadena.
+        </p>
+
+        <p>
+            Ver archivo <a href="../python/5. indexacion-cadena-caracteres.py">5. indexacion-cadena-caracteres.py</a> para ver programa.
         </p>
     </section>
 
@@ -407,17 +425,17 @@
         <p>
             No importa si colocamos como final un valor de índice que exceda por mucho el índice de la cadena, el resultado será el mismo pero no es recomendable, no es una buena práctica: "perro" [3:22], por ejemplo, esto nos devolverá "rro".
         </p>
-    </section>
 
-    <hr>
-
-    <section>
-        <h2>
+        <h3>
             Parámetro paso en el Slicing
-        </h2>
+        </h3>
         
         <p>
             Este es un tercer parámetro que nos permite establecer la forma en que se saltará de un caracter a otro, de dos en dos o de tres en tres por ejemplo. La sintaxis es la misma que el Slicing normal, solo que agregamos dos puntos (:) más para agregar el parámetro de paso: cadena o variable [inicio:fin:paso], "dinosaurio" [1:8:3], por ejemplo, esto nos devolverá "isr".
+        </p>
+
+        <p>
+            Ver archivo <a href="../python/6. rebanado-slicing.py">6. rebanado-slicing.py</a> para ver programa.
         </p>
     </section>
 
@@ -467,46 +485,42 @@
         <p>
             Otra diferencia importante es que cuando no se consigue un caracter con find() el programa retorna -1 pero sigue conrriendo, en cambio con index() el  programa detiene su ejecución pues se identifica que hay un error. Se rompe el código, como se dice coloquialmente
         </p>
-    </section>
 
-    <hr>
-
-    <section>
-        <h2>
+        <h3>
             Métodos que comienzan con is
-        </h2>
+        </h3>
         
         <p>
             Estos métodos tienen la particularidad de que retornan verdadero o falso, a continuación mencionaremos varios de ellos.
         </p>
         
-        <h3>
+        <h4>
             Método isalnum
-        </h3>
+        </h4>
         
         <p>
             Este método verifica si todos los caracteres contenidos por una cadena son alfanuméricos (a-z, A-Z, 0-9), si es verdad retorna True, si no, retorna False.
         </p>
         
-        <h3>
+        <h4>
             Método isalpha
-        </h3>
+        </h4>
         
         <p>
             Este método verifica si todos los caracteres contenidos por una cadena son alfabéticos, si es verdad retorna True, si no, retorna False.
         </p>
         
-        <h3>
+        <h4>
             Método isdecimal
-        </h3>
+        </h4>
         
         <p>
             Este método verifica si todos los caracteres contenidos por una cadena son decimales, si es verdad retorna True, si no, retorna False. Aunque el nombre parece decir que se trata de una cadena conformada por número decimal, en realidad en python los caracteres decimales son aquellos que se pueden usar para formar números en base 10, por ejemplo, U+0660, ARABIC-INDIC DIGIT ZERO. Formalmente, un carácter decimal es un carácter en la categoría general «Nd» de Unicode, esto dice la documentación, pero en sí, esto verifica que los caracteres de la cadena son número solamente, en caso de algún otro caracter que no sea un número esté presente en la cadena, retornará False.
         </p>
         
-        <h3>
+        <h4>
             Método isdigit
-        </h3>
+        </h4>
         
         <p>
             Este método verifica si todos los caracteres contenidos por una cadena son digitos, en Python .os dígitos incluyen los caracteres decimales y dígitos que requieren un tratamiento especial, como por ejemplo los usados para superíndices. Esto incluye dígitos que no pueden ser usados para formar números en base 10, como los números Kharosthi. Formalmente, un dígito es un carácter que tiene la propiedad Numeric_Type definida como Digit o Decimal, esto dice la documentación.
@@ -519,18 +533,18 @@
         <p>
             Los métodos que comienzan con is son muy útiles cuando se comienza a trabajar con condicionales.
         </p>
-    </section>
 
-    <hr>
-
-    <section>
-        <h2>
+        <h3>
             Método lower() y upper()
-        </h2>
+        </h3>
         
         <P>
             El método lower retorna una copia en minúsculas de la cadena de caracteres y upper retorna una copia en mayúsculas de la cadena de caracteres. La sintaxis es como se explicó antes: cadena o variable.lower/upper(), "perro".upper(), por ejemplo, esto nos retornará "PERRO".
         </P>
+
+        <p>
+            Ver archivo <a href="../python/7. metodos-de-cadena.py">7. metodos-de-cadena.py</a> para ver programa.
+        </p>
     </section>
 
     <hr>
@@ -574,6 +588,10 @@
             <code>
                 num = int(input("Ingrese un número: "))
             </code>
+        </p>
+
+        <p>
+            Ver archivo <a href="../python/8. funcion-input-e-int().py">8. funcion-input-e-int().py</a> para ver programa.
         </p>
     </section>
 
