@@ -7,7 +7,6 @@
     <title>Curso de Python</title>
     <link rel="icon" href="../img/piton.png">
 </head>
-<body>
     <header>
         <h1>
             Curso de python de FreeCodeCamp
@@ -1736,6 +1735,105 @@
         <h2>
             Ciclos for
         </h2>
+
+        <p>
+            Un ciclo  es una estructura de control en programación que permite ejecutar una o varias líneas de código múltiples veces. El ciclo for es utilizado cuando sabemos con antelación cuántas veces debemos repetir ciertas instrucciones. En caso contrario utilizamos otro tipo de cilo.
+        </p>
+
+        <p>
+            El proceso inicia cuando se consigue un ciclo o bucle durante la ejecucion del programa, se evalúa una condición, l evaluar la condición en un ciclo for, si esta es True (verdadera) y quedan iteraciones pendientes, se ejecuta nuevamente el conjunto de instrucciones que corresponden al ciclo, y nuevamente se vuelve a evaluar esa condición cuando se completa el proceso, si esa condición es False (falsa), el ciclo se detiene, pero si vuelve a ser True, las instrucciones se vuelven a repetir y se vuelve a evaluar la misma condición si todavía quedan iteraciones o repeticiones pendientes. El término iteración es extremadamente importante en programación y específicamente en el tema de ciclos o bucles, Una iteración es una repetición de un cierto grupo de instrucciones, es decir, una repetición de un bucle o ciclo. Cuando el ciclo se detiene finaliza ese proceso y continúa la ejecución del programa de forma lineal como se ejecuta normalmente.
+        </p>
+
+        <p>
+            Los ciclos se denominan estructuras de control porque cambian o controlan el flujo o la ejecución del programa de una forma distinta y permiten que generemos una ejecución repetitiva. En la siguiente imagen podemos ver un diagrama del flujo o lógica básica del ciclo for. 
+        </p>
+        <img src="../img/logica-ciclo-for.png" alt="lógica de ciclo for" title="lógica de ciclo for" width="40%">
+
+        <p>
+            La sintaxis del ciclo for es la siguiente (es una de las posibles opciones): primero escribimos la palabra clave for, luego una variable, luego el operador in y por último una función específica, en el caso de la siguiente imagen veremos que se utiliza una función llamada range, que nos permite establecer un rango determinado, estableciendo como sus parámetros el inicio y final (esta función nos permitirá establecer cuántas veces se repetirá el bucle), luego dos puntos y abajo con identación el código que se ejecutará en cada iteración.
+        </p>
+
+        <img src="../img/ciclo-for-sintaxis.png" alt="sintaxis ciclo for" title="sintaxis ciclo for">
+
+        <p>
+            La variable que se copia como parte de la sintaxis del ciclo for es una variable que nosotros definimos para controlar el proceso del ciclo, esta se denomina una variable de control. Veremos algunas de sus características en la siguiente imagen.
+        </p>
+
+        <img src="../img/variable-de-control-caracteristicas.png" alt="Características de la variable de control" title="Características de la variable de control" width="40%">
+
+        <p>
+            La variable se actualiza con los valores retornados por la función range.
+        </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>
+            Función range
+        </h2>
+
+        <p>
+            Esta función va a retornar una secuencia de valores, y cada uno de esos valores va a ser asignado a la variable de control, uno a uno. La fución range es utilizada para obtener una secuencia de números enteros. En la siguiente imagen veremos qué retorna la función cuando aplicamos un valor 4, podremos ver que retorna un valor que va desde cero hasta 3.
+        </p>
+
+        <img src="../img/range-ejemplo-valor-4-1.png" alt="Range con valor 4" title="Range con valor 4" width="40%">
+
+        <p>
+            La función retorna estos valores porque el valor que específicamos representa el final de la secuencia, y la frecuencia llegará hasta ese valor menos 1, es decir, 4-1 = 3. Esto se debe a que al no especificar el inicio de la secuencia, el valor por defecto de inicio va a ser 0, aunque podemos especificar desde donde comenzará la secuencia si pasamos dos valores como parámetros a la función, siendo el primero el inicio y el último el final (ambos van separados por una coma y un espacio).
+        </p>
+
+        <img src="../img/range-ejemplo-valor-4-explicación.png" alt="Explicación del retorno de range" title="Explicación del retorno de range" width="40%">
+        
+        <p>
+            En la siguiente imagen podemos ver el ciclo for con un proceso ejecutado.
+        </p>
+
+        <img src="../img/for-ejemplo-con-retorno.png" alt="Ejemplo de for ejecutado" title="Ejemplo de for ejecutado" width="40%">
+
+        <p>
+            Ahora veremos qué es lo que ocurre en la siguiente serie de imágenes. En la siguiente imagen se ve una representación de lo que pasa tras bambalinas cuando es ejecutado el ciclo, es como si la función range fuese remplazada por la secuencia 0, 1 , 2, 3 (porque el valor que le pasamos es 4).
+        </p>
+
+        <img src="../img/bambalinas-range-ejemplo-1.png" alt="Ejemplo del detrás de bambalinas de range" title="Ejemplo del detrás de bambalinas de range" width="40%">
+        
+        <p>
+            En el siguiente ejemplo colocamos la secuencia en lugar de range para verlo más claramente. Tenemos la variable de control encerrada en un cuadrado amarillo, el cuerpo de ciclo que es la línea en donde se encuentra la variable, y la línea de código que se repetirá. Mandamos a imprimir la variable i, la cual se actualiza en cada iteración del ciclo de forma automática, por esta razón en cada iteración se muestra un valor distinto.
+        </p>
+        
+        <img src="../img/bambalinas-range-ejemplo-2.png" alt="Ejemplo del detrás de bambalinas de range 2" title="Ejemplo del detrás de bambalinas de range 2" width="40%">
+        
+        <p>
+            En cada iteración, un valor de la secuencia retornada por range será asignado a la variable de control, por lo que en la primera iteración se imprime el número 0, en la segunda iteración el número 1, en la tercera iteración el número 2 y en la cuarta iteración el número 3. Como no quedan más en la secuencia retornada por range, el ciclo se termina. a continuación se mostrarán 4 imágenes para señalar el ciclo paso a paso. 
+        </p>
+
+        <p>
+            Primero el valor 0 se asigna a la variable de control.
+        </p>
+
+        <img src="../img/for-iteración-1-ejemplo.png" alt="Iteración 1" title="Iteración 1" width="40%">
+        <p>
+            Luego el valor 1 se asigna a la variable de control.
+        </p>
+        <img src="../img/for-iteración-2-ejemplo.png" alt="Iteración 2" title="Iteración 2" width="40%">
+        <p>
+            Después el valor 2 se asigna a la variable de control.
+        </p>
+        <img src="../img/for-iteración-3-ejemplo.png" alt="Iteración 3" title="Iteración 3" width="40%">
+        <p>
+            Y por último el valor 3 se asigna a la variable de control, terminando así el ciclo porque no hay más elementos retornados por la función range.
+        </p>
+        <img src="../img/for-iteración-4-ejemplo.png" alt="Iteración 4" title="Iteración 4" width="40%">
+
+        <p>
+            Así ya se entiende que controlando el número de elementos de la secuencia controlamos cuántas iteraciones o repeticiones se ejecutan, y también controlamos qué valores se asignan a la variables de control, la cual podemos utilizar en nuestro código
+        </p>
+
+        <p>
+            El ciclo se puede personalizar aún más por la función range que es capaz de recibir más valores, como se puede ver en la siguiente imagen, sin embargo es importante mencionar que, al pasar un solo valor a dicha función, el valor es el de stop, es decir, el final de los valores retornados y la secuencia inicia en 0 por defecto. El valor step o paso se utiliza para determinar cómo se saltará de un valor de la secuencia a otro, este parámetro o valor a pasar a range es opcional.
+        </p>
+
+        <img src="../img/range-parametros-posibles.png" alt="Parámetros posibles de la función range" title="Parámetros posibles de la función range" width="60%">
     </section>
 </body>
 </html>
