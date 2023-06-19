@@ -256,7 +256,7 @@
         </ul>
 
         <p>
-            Ver archivo <a href="../python/2.1 minuscula-mayuscula-variable.py">2.1 minúcula-mayústula-variable.py</a> para ver programa.
+            Ver archivo <a href="../python/3. minuscula-mayuscula-variable.py">3. minúcula-mayústula-variable.py</a> para ver programa.
         </p>
     </section>
 
@@ -1764,6 +1764,10 @@
         <p>
             La variable se actualiza con los valores retornados por la función range.
         </p>
+
+        <p>
+            Ver archivo <a href="../python/19. ciclo-for-y-range.py">19. ciclo-for-y-range.py</a> para ver programa.
+        </p>
     </section>
 
     <hr>
@@ -1834,6 +1838,71 @@
         </p>
 
         <img src="../img/range-parametros-posibles.png" alt="Parámetros posibles de la función range" title="Parámetros posibles de la función range" width="60%">
+         
+        <p>
+            Es muy importante recordar que el último valor de la secuencia retornada por la función range será un número menos que el que indicamos como parámetro stop, es decir, si indicamos 5, se imprime hasta el 4, si indicamos 6, se imprime hasta el 5, y así suvesivamente.
+        </p>
+
+        <p>
+            Ver archivo <a href="../python/19. ciclo-for-y-range.py">19. ciclo-for-y-range.py</a> para ver programa.
+        </p>
+    </section>
+
+    <hr>
+    
+    <section>
+        <h2>
+            Ciclos sobre iterables
+        </h2>
+
+        <p>
+            Podemos definir ciclos que en lugar de iterar sobre la secuencia de range, iteran sobre elementos específicos que se denominan iterables. Un iterable es un elemento que retorna sus elementos uno a la vez, son datos, valores o estructuras en python que pueden retornar cada uno de sus elementos a la vez. Así como range retornaba una secuencia y cada elemento de esa secuencia se asignaba a una variable, podemos usar iterables para asignar sus valores, a continuación veremos los iterables más comunes en una imagen. Con otros se hace referencia a conjuntos, archivos y otros tipos de valores. Podemos iterar sobre cada uno de ellos para hacer algo con cada uno de sus elementos.
+        </p>
+
+        <img src="../img/elemento-variable de control.png" alt="elemento-variable de control" title="elemento-variable de control" width="40%">
+        
+        <p>
+            Cada uno de sus elementos se va a asignar a la variable de control uno a la vez, uno por iteración, y podemos usar ese elemento directamente en nuestro código, en el cuerpo del ciclo. La sintaxis para usar el ciclo for sobre iterables es la siguiente.  
+        </p>
+        
+        <img src="../img/sintaxis-for-iterable.png" alt="Ciclo for con iterables" title="Ciclo for con iterables" width="40%">
+        
+        <p>
+            A continuación se muestra una imagen que enseña el resultado de una iteración sobre una cadena de caracteres, se puede ver que cada caracter es asignado a la variables de control uno a la vez. Se usó la variable char porque es la abreviación de la palabra caracter en inglés, es un nombre común encontrado en la literatura de python.
+        </p>
+        
+        <img src="../img/for-iterando-en-cadena.png" alt="for iterando en cadena" title="for iterando en cadena" width="40%">
+
+        <p>
+            Este ciclo funciona de la misma forma con las tuplas y listas,  sin embargo con los diccionarios si hay una variación. Los diccionarios son más complejos porque tienen claves, valores y pares clave valor. Debemos escoger sobre cuál de ellos debemos iterar, para iterar sobre las claves utilizamos la siguiente sintaxis.
+        </p>
+        
+        <img src="../img/for-iterando-diccionario.png" alt="sintaxis de for iterando diccionario" title="sintaxis de for iterando diccionario" width="40%">
+
+        <p>
+            Si quisieramos iterar sobre los valores del diccionario debemos usar un método propio de esta estructura de datos, este método nos retornará los valores contenidos por el diccionario en lugar de las claves y el método es .value(), la sintaxis es la siguiente: for valor valor (variable de control) in diccionario.values().
+        </p>
+
+        <p>
+            Para iterar en los pares clave valor tendremos que declarar dos variables de control separadas por una coma (,). La sintaxis es la siguiente: 
+            for clave, valor in diccionario.items(). Para esto se utiliza un método llamado .item(), dicho método retorna una lista de los pares clave valor del diccionario.
+        </p>
+        
+        <p>
+            Ver archivo <a href="../python/20. ciclo-sobre-iterables.py">20. ciclo-sobre-iterables.py</a> para ver programa.
+        </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>
+
+        </h2>
+
+        <p>
+            Ver archivo <a href="../python/20. ciclo-sobre-iterables.py">20. ciclo-sobre-iterables.py</a> para ver programa.
+        </p>
     </section>
 </body>
 </html>
