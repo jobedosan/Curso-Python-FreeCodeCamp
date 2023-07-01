@@ -1897,11 +1897,61 @@
 
     <section>
         <h2>
-
+            Ciclos while
         </h2>
 
         <p>
-            Ver archivo <a href="../python/20. ciclo-sobre-iterables.py">20. ciclo-sobre-iterables.py</a> para ver programa.
+            El ciclo while continúa mientras una condición es verdadera y se detiene cuando esa considición es falta (while significa mientras en inglés). Para hacer que la condición deje de ser verdadera en algún momento, debemos hacer las actualizaciones necesarias a las variables involucradas en la condición para garantizar que en algún momento esa condición sea falsa y sel proceso no sea eterno (en teoría, porque el proceso puede ser detenido por la computadora o por nosotros mismos manualmente). Si llega a ocurrir, esto es denominado ciclo infinito o infinite loop.
+        </p>
+
+        <p>
+            En la siguiente imagen podemos ver la sintaxis del ciclo while, es la palabra while, seguido por la condición, dos puntos (:) y el código a ejecutar se copia con indentación.
+        </p>
+
+        <img src="../img/sintaxis-ciclo-while.png" alt="Sintaxis del ciclo while" title="Sintaxis del ciclo while" width="40%">
+        
+        <p>
+            Un ciclo while no tiene un número fijo o prefeterminado de iteraciones, no sabemos o no específicamos explicitamente cuántas iteraciones queremos como haciamos en el ciclo for. El ciclo se ejecuta hasta que la iteración es falsa.
+        </p>
+
+        <p>
+            Podemos ver la lógica básica de un ciclo while en la siguiente imagen. Inicia el proceso cuando se consigue un ciclo en el programa, se procede a evaluar la condición y si resulta ser True, la secuencia de instrucciones se ejecuta y nuevamente se evalúa la condición para ver si debe haber una nueva iteración, si la condición llega a ser falta el ciclo se detiene, termina el proceso de repetición y el programa sigue ejecutándose.
+        </p>
+        
+        <img src="../img/lógica-básica-ciclo-while.png" alt="Lógica básica del ciclo while" title="Lógica básica del ciclo while" width="40%">
+        
+        <p>
+            Los ciclos while no actualizan la(s) variable(s) de control automáticamente, deben ser actualizadas en el cuerpo del ciclo.
+        </p>
+        
+        <p>
+            En la siguiente variable podemos ver un ejemplo de un ciclo while, se declara e inicializa la variable x con un valor 20, y se establece la condición de que mientras x sea menor a 35, se imprimirá el valor de x, luego de la impresión (print) se establece una actualización para la variable x, sumándole 3 en cada iteración, se hizo con un operador de asignación. El ciclo se repite hasta llegar al valor de 35, pero solo se imprime hasta el número 32, porque al ser igual que 35 ya no se cumple la condición.
+        </p>
+
+        <img src="../img/ciclo-while-ejemplo.png" alt="Ejemeplo del ciclo while" title="Ejemeplo del ciclo while" width="25%">
+        
+        <p>
+            Para interrumpir un ciclo infinito debemos utilizar el comando Ctrl + C para detener la ejecución de ese ciclo infinito. En caso de olvidar el atajo del teclado podemos ir a la pestaña shell de la consola interactiva (si es lo que estamos utilizando) para presionar la opción Interrupt Execution.
+        </p>
+
+        <p>
+            Ver archivo <a href="../python/21. ciclo-while.py">21. ciclo-while.py</a> para ver programa.
+        </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>
+            Funciones
+        </h2>
+
+        <p>
+
+        </p>
+
+        <p>
+            Ver archivo <a href="../python/21. ciclo-while.py">21. ciclo-while.py</a> para ver programa.
         </p>
     </section>
 </body>
