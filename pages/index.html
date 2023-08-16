@@ -1958,9 +1958,227 @@
             </h2>
         
             <p>
-                
+                Una función es un bloque de código reutilizable que realiza una sola tarea específica. A continuación aprenderemos a crear nuestras propias funciones, hasta ahora las hemos utilizado como una caja negra, es decir, sabemos su nombre y lo que hacen pero no conocemos su código.
             </p>
         
+            <p>
+                Cuando escribimos un programa de Python, por lo general, realizamos tareas que pueden ser repetitivas. Si necesitamos hacer un cambio o corregir un error en esa tarea, el proceso de cambio puede ser bastante complejo e incluso catastrófico si no hacemos los cambios el los lugares indicados.
+            </p>
+
+            <p>
+                En programación existe un principio que nos dice "Don't Repeat Yourself" (DRY). Esto hace referencia a que no debemos repetirnos nosotros mismos, es decir, debemos evitar repetir nuestro código si no es necesario, minimizar la cantidad de código repetido en el programa. Para esto podemos definir una función. Al definir una función podemos escribir el código para ejecutar una tarea determinada en muchos lugares del código, una sola vez en un lugar específico, y le asignamos un nombre a dicha tarea. El nombre estará vinculado con el código  para ejecutar la tarea. Simplemente con usar ese nombre en el programa podremos ejecutar las instrucciones para realizar la tarea en donde lo necesitemos. Todo esto es el principio de una función, es escribir una secuencia de instrucciones en un lugar específico y luego reutilizarla en donde lo necesitemos. Así evitaremos la repetición y el proceso de mantenimiento y corrección de errores será mucho más fácil.
+            </p>
+
+            <p>
+                El código que escribimos en una función nos brinda las siguientes ventajas:
+            </p>
+
+            <dl>
+                <dt>
+                    Reusables
+                </dt>
+
+                <dd>
+                    Los escribimos una sola vez y lo podemos reusar cuantas veces queramos.
+                </dd>
+
+                <dt>
+                    Conciso
+                </dt>
+
+                <dd>
+                    Hace que nuestro código sea más conciso ya que nos evita escribir decenas de líneas repetidas cientos de veces.
+                </dd>
+
+                <dt>
+                    Leíble
+                </dt>
+
+                <dd>
+                    Hace que nuestro código sea más fácil de leer para otros desarrolladores y nosotros mismos.
+                </dd>
+
+                <dt>
+                    Mantenible
+                </dt>
+
+                <dd>
+                    Hace que nuestro código sea mantenible, que cuando necesitemos trabajar con ese código y agregar nuevas funcionalidades al programa, todo el proceso sea más fácil.
+                </dd>
+
+                <dt>
+                    Comprobable
+                </dt>
+
+                <dd>
+                    Hace nuestro código más comprobable, es decir, que sea mucho más fácil de probar para comprobar que funciona adecuadamente, probamos simplemente el conjunto de instrucciones que escribimos una sola vez y sabremos si funciona o no, y cualquier cambio se realiza en ese bloque específico de código, en lugar de hacer cambios en todas las distintas partes del programa donde usemos esa tarea.
+                </dd>
+            </dl>
+
+            <p>
+                Para definir una función debemos utilizar la palabra clave def, seguida de un espacio, el nombre de la función, paréntesis, dos puntos (:) y luego salto de línea con el código de la función, el código debe estar indentado, ese código es la secuencia de instrucciones que vamos a utilizar. Se puede ver la sintaxis en la siguiente imagen.
+            </p>
+
+            <img src="../img/funcion-sintaxis.png" alt="Sintaxis de una función" title="Sintaxis de una función" width="50%"
+            width="50%"
+            width="50%">
+
+            <p>
+                A continuación mostramos un ejemplo de una función definida, esta función imprimirá el texto "¡Hola, Mundo!" cada vez que sea llamada. El nombre de las funciones siguen el siguiente estándar, se escriben en minúscula y se separan las palabras con un guión bajo.
+            </p>
+
+            <img src="../img/funcion-ejemplo.png" alt="Ejemplo de función" title="Ejemplo de función" width="50%"
+            width="50%"
+            width="50%">
+
+            <p>
+                Un término técnico muy importante que debemos tener presente es <strong>Llamar a una Función</strong>, cuando llamamos a una función, lo que hacemos es ejecutar el código del cuerpo de la función. Para llamar una función utilizamos el nombre de la función seguido de paréntesis, como se muestra en la siguiente imagen, esa sería la sintaxis adecuada para llamar una función. 
+            </p>        
+
+            <img src="../img/sintaxis-llamada-funcion.png" alt="Sintaxis para llamar una función" title="Sintaxis para llamar una función" width="50%"
+            width="50%"
+            width="50%">    
+
+            <p>
+                A continuación mostramos la definición y resultado de llamar a la función definida, se puede ver que se definió la función en la parte superior, y en la parte inferior se llama a la función 3 veces, haciendo que se ejecute el código en el cuerpo de la función con cada llamada.
+            </p>
+
+            <img src="../img/ejemplo-funcion-definida-ejecutada.png" alt="Ejemplo de definicion y llamado de función" title="Ejemplo de definicion y llamado de función" width="50%"
+            width="50%"
+            width="50%">
+
+            <p>
+                Las funciones son como compartimentos dentro del programa principal, cuando nosotros creamos un programa en Python, las funciones son elementos de dicho programa, pero dentro de ellas hay como un miniambiente con sus propias propiedades y características, así que los podemos considerar como un compartimento dentro del programa.
+            </p>
+
+            <p>
+                Ese compartimento puede comunicarse con el programa principal y puede recibir datos del programa principal también. 
+            </p>
+
+            <h3>
+                Cómo recibe datos una función desde el programa principal
+            </h3>
+
+            <p>
+                Esta es una de las operaciones más comunes que podemos realizar con las funciones, pasar valores. Al trabajar con algunas de las funciones integradas en Python debíamos pasar algunos valores para que la función hiciera su trabajo de forma correcta. Estos valores que podemos especificar en una función que definimos se denominan parámetros, y los valores que les pasamos con eesos parámetros se denominan argumentos.
+            </p>
+
+            <p>
+                Un parámetro es una variable que se incluye en la definición de la función para representar y guardar un valor que podemos pasar cuando llamamos a la función. Si no indicamos parámetro alguno, la función no esperará ningún valor cuando sea llamada. Los parámetros se incluyen en la definición de la función. A continuación mostramos la sintaxis de una función con parámetro. 
+            </p>
+
+            <img src="../img/funcion-con-parametro-sintaxis.png" alt="Sintaxis para una función con parámetro" title="Sintaxis para una función con parámetro" width="50%"
+            width="50%"
+            width="50%">
+
+            <p>
+                El parámetro es como una compuerta que permite a la función comunicarse con el programa principal, a través de cierto valor. Al llamar la función tendremos que pasar un valor para el parámetro, el parámetro recibe el nombre que le asignemos pues es una variable. El parámetro puede ser usado en el cuerpo de la función como cualquier otra variable. Lo que cambia es que es una variable definida junto con la función.
+            </p>
+
+            <p>
+                Si llegamos a necesitar varios parámetros en una función, estos deben separarse por comas (,) y un espacio luego de cada coma. Podemos ver un ejemplo de la sintaxis de una función que recibe varios parámetros en la siguiente imagen.
+            </p>
+
+            <img src="../img/sintaxis-funcion-varios-parametros.png" alt="Sintaxis de función con varios parámetros" title="Sintaxis de función con varios parámetros" width="50%">
+
+            <p>
+                Hay que recordar que los parámetros son variables, pero hay otro tipo de valor que está estrechamente rrelacionado con los parámetros, de momento solo se ha visto cómo queremos utilizar estas variables denominadas parámetros en el cuerpo de la función, pero los valores guardados en estas variables todavía no existen.
+            </p>
+
+            <p>
+                Para asignar valores a los parámetros debemos recurrir a los argumentos, un argumento es un valor que asignamos a un parámetro cuando llamamos a una función en el programa principal o en cualquier otra parte del programa en que la necesitemos.
+            </p>
+
+            <p>
+                Los argumentos son especificados en la llamada de una función, es allí en donde específicamos esos valores, y luego los argumentos son asignados a sus correspondientes parámetros.
+            </p>
+
+            <p>
+                Los argumentos son asignados en el orden en que fueron definidos los parámetros, como se puede ver en el siguiente ejemplo, 4 sería el argumento que representa al parámetro x, mientras que 5 sería el argumento que representa al parámetro y.
+            </p>
+
+            <img src="../img/definicion-llamada-argumentos-ejemplo.png" alt="Ejemplo de asignacion de argumentos a parámetros" title="Ejemplo de asignacion de argumentos a parámetros"  width="50%">
+
+            <p>
+                A continuación mostramos un ejemplo más practico dentro de la consola interactiva, definimos una función con 2 parámetros y la llamamos para que muestre el resultado.
+            </p>
+
+            <img src="../img/ejecucion-funcion-parametros.png" alt="Ejemplo de función con parámetros siendo llamada" title="Ejemplo de función con parámetros siendo llamada" width="50%">
+
+            <h3>
+                Cómo retorna datos una función hacia el programa principal
+            </h3>
+
+            <p>
+                El propósito de esta comunicación entre la función y el programa principal es retornar un valor luego de completar la tarea. La función len() por ejemplo, retorna el valor del tamaño de un string. 
+            </p>
+
+            <P>
+                Para retornar un valor con una función debemos utilizar una sentencia return, la cual se agrega en el cuerpo de la función con la siguiente sintaxis: palabra clave return, espacio, valor. Como se puede ver en el siguiente ejemplo.
+            </P>
+
+            <img src="../img/sintaxis-funcion-return.png" alt="Sintaxis de función con return" title="Sintaxis de función con return" width="50%">
+
+            <p>
+                A continuación podemos ver una función que nos retorna el valor de una suma, la diferencia es que no muestra el resultado como pasa con print, es decir, cuando llamemos a la función, ese lugar específico donde fue llamada será reemplazada por el valor retornado, pudiendo guardar el valor retornado a una variable o podremos usarlo dentro de nuestro programa. El retorno nos permite utilizar el resultado en nuestro programa. Esa es la diferencia entre return y print, con print no podríamos utilizar el resultado de la función de suma del siguiente ejemplo.
+            </p>
+
+            <img src="../img/funcion-con-return-ejemplo.png" alt="Ejemplo de función con return" title="Ejemplo de función con return" width="50%">
+
+            <p>
+                Es importante mencioinar que cuando se ejecutar 'return', la ejecución de la función se detiene inmediatamente.
+            </p>
+
+            <p>
+                Cuando no hay una sentencia return en una función, el valor que se retorna por defecto es None, este es un valor especial que se utiliza para representar casos en los que no hay un valor específico asignado. 
+            </p>
+
+            <p>
+                En el siguiente ejemplo podemos ver la función sumar que hemos visto antes pero sin el return, al tratar de utilizar la variable cuyo valor es la función suma, con la función print, lo que se imprime es none, ya que la función no tiene la palabra return, no hay un valor retornado.
+            </p>
+
+            <img src="../img/funcion-sin-return.png" alt="Ejemplo de función sin return" title="Ejemplo de función sin return" width="50%">
+
+            <p>
+                En el shell interactivo (la consola interactiva), el valor retornado por la llamada a una función no se muestra si se asigna a una variable. Vamos a tener que utilizar la función print para mostrar el resultado.
+            </p>
+
+            <h3>
+                Alcande de una variable (Scope)
+            </h3>
+
+            <p>
+                El Scope es el alcance que tendrá la variable en el programa. Esto determina dónde se podrá usar, porque una variable no puede ser utilizada en todos los distintos rincones del programa. El Scope determina a qué variables se tiene acceso en cada parte del programa.
+            </p>
+
+            <p>
+                Las variables de una función solo se pueden utilizar en la función, ya que pertenecen a dicho ambiente. 
+            </p>
+
+            <p>
+                En Python existen 2 Scopes, el global y el local; las variables que pertenecen al alcance global son aquellas que son definidas en el programa principal, mientras que las variables que pertenecen al alcance local son definidas en una función.
+            </p>
+
+            <p>
+                El Scope global lo tienen las variables que fueron definidas en el programa principal, estas variables puede ser accedidas y utilizadas en todos los rincones del programa, incluyendo las funciones. En cambio, las variables con un alcance local solo pueden ser utilizadas dentro de la función donde fueron definidas.
+            </p>
+
+            <p>
+                A continuación se ve una variable global y como se utiliza dentro de la función, ya que este Scope permite realizar esta acción. La variable x es usada dentro de la función.
+            </p>
+
+            <img src="../img/ejemplo-variable-global.png" alt="Ejemplo de variable global" title="Ejemplo de variable global" width="50%">
+            
+            <p>
+                El parámetro y de la función anterior es una variable local.
+            </p>
+            
+            <img src="../img/funcion-con-variable-local.png" alt="Ejemplo de variable local" title="Ejemplo de variable local" width="50%">
+
+            <p>
+                Si tratamos de utilizar esa variable local y, ese parámetro, fuera de la función, en el programa principal, no será reconocida, se generará un error durante la ejecución del programa que va a decir que la variable no está definida o no se encuentra en el programa.
+            </p>
+
             <p>
                 Ver archivo <a href="../python/21. ciclo-while.py">21. ciclo-while.py</a> para ver programa.
             </p>
