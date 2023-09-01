@@ -2183,6 +2183,72 @@
                 Ver archivo <a href="../python/22. funciones.py">22. funciones.py</a> para ver programa.
             </p>
         </section>
+
+        <hr>
+
+        <section>
+            <h2>
+                Recursión
+            </h2>
+
+            <p>
+                La recursión es definir algo en términos de sí mismo, es decir, vamos a definir algo utilizando ese mismo concepto. Vamos a a abordarlo de la siguiente manera para entenderlo más fácilmente.
+            </p>
+
+            <p>
+                Imaginemos que tenemos un problema y lo dividimos en cuatro sub-problemas que se pueden resolver de la misma forma para luego resolver el problema inicial completo. Vamos a ilustrar el concepto de recursión con la sucesión de Fibonacci, un concepto muy famoso de una sucesión recursiva.
+            </p>
+
+            <p>
+                Una sucesión es una secuencia de números que siguen un patrón, en el caso de Fibonacci, cada número de la secuencia es igual a la suma de los dos números que le anteceden, es decir 
+                fib(n) = fib(n-1) + fib(n-2). Es importante recordar que la sucesión comienza con 0 y 1.
+            </p>
+
+            <p>
+                Primero se sumarían entonces 0 + 1, dando como tercer número el 1, luego 1 + 1, que nos dará como cuarto número 2, luego 1 + 2 que nos dará 3, luego 2 + 3 que nos dará 5, y así sucesivamente. Entonces, utilizamos la fórmula anterior para ir obteniendo los números que van apareciendo en la sucesión Fibonacci. Es la misma fórmula para obtener cada número, en programación a esto se le conoce como una función recursiva, es decir, una función que se llama a sí misma.
+            </p>
+
+            <p>
+                Las funciones recursivas tienen dos elementos principales en su estructura, un caso base y un caso recursivo. El caso base permite que el proceso de que la función se llame a sí misma se detenga. Y el caso recursivo es el que nos permite descomponer un problema en una versión más pequeña de ese mismo problema, hasta llegar al caso base que detiene el proceso. Entonces, a partir de los problemas pequeños en que dividimos un problema inicial, resolveremos dicho problema inicial.
+            </p>
+
+            <p>
+                A continuación se muestra una función que determina la posición de un número en la sucesión fibonacci, en esta función eso es lo que representará la variable n, que es el parámetro que se pasará a la función. Esto lo hará tomando la posición 0 como la posición inicial.
+            </p>
+
+            <img src="../img/recursividad-ejemplo-fibonacci.png" alt="Ejemplo de función recursiva" title="Ejemplo de función recursiva" width="50%">
+            
+            <p>
+                Según lo mencionado anteriormente, n representará los números azules de la siguiente imagen, es decir, la posición de un número en la sucesión fibonacci. Es decir que si pasamos el número 6 a la función, nos dará como resultado el número 8, y así sucesivamente.
+            </p>
+            
+            <img src="../img/valor-n-en-función-recursiva.png" alt="Valor de n" title="Valor de n" width="50%">
+            
+            <p>
+                Volviendo a la función, vamos a ver su principal característica, esto es que se llama a sí misma en el return, en el siguiente ejemplo podemos verlo más claramente.
+            </p>
+
+            <img src="../img/funcion-recursiva-explicada-1.png" alt="Explicación de la función recursiva" title="Explicación de la función recursiva" width="50%">
+            
+            <p>
+                Cuando n es igual a 0 o a 1 se dará el caso base, el cual detiene la ejecución de la función, returnará n y listo, esto se debe a que en la posición 0 y 1 de la sucesión fibonacci están esos mismos valores.
+            </p>
+            
+            <p>
+                En el caso de que el valor pasado a la función no sea el número 0 o 1, se ejecutará el else dentro del cuerpo de la función, es allí en donde la función se llama a sí misma para determinar qué número se encuentra en la posición que se pasó como parámetro. En otras palabras, para determinar qué número ocupa una posición dada, debemos sumar los dos números anteriores a dicha posición, y eso es lo que se hace en la parte recursiva de la función.
+            </p>
+            
+
+            <img src="../img/caso-recursivo-señalado.png" alt="Caso recursivo señalado" title="Caso recursivo señalado" width="50%">
+            
+            <p>
+                La diferencia clave para generar un proceso adecuado es que el valor del parámetro pasado a la función, al momento de llamarse a sí misma, debe ser distinto, como se puede ver, la función se llama con un valor n, y al momento de llamarse a sí misma de nuevo n es igual a n-1 y luego a n-2, es un valor distinto. Esto lo que hará es resolver versiones más pequeñas del problema hasta llegar al caso base, el caso base es la parte que se encuentra en el if del cuerpo de la función, recomendamos analizar qué ocurre con la función al llamarse a sí misma utilizando los parámetros 2 y 3, se podrá ver como la función llega a llamarse a sí misma varias veces hasta reducirse al caso base, dándonos así un resultado final.
+            </p>
+
+            <p>
+                Ver archivo <a href="../python/23. Recursión.py">23. Recursión.py</a> para ver programa.
+            </p>
+        </section>
     </main>
 </body>
 </html>
