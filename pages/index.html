@@ -2249,6 +2249,155 @@
                 Ver archivo <a href="../python/23. Recursión.py">23. Recursión.py</a> para ver programa.
             </p>
         </section>
+        
+        <hr>
+        
+        <section>
+            <h2>
+                Archivos
+            </h2>
+
+            <p>
+                Veremos ahora una breve introducción a trabajar con archivos en python, específicamente en este curso veremos ejemplos con archivos de texto posicionados en la misma carpeta que el archivo Python que se está ejecutando. Se menciona esto para aclarar que en caso contrario la dirección que se debe colocar en el código es distinta.
+            </p>
+
+            <h3>
+                Sentencia 'with'
+            </h3>
+
+            <p>
+                Para trabajar con archivos en Python es recomendado utilizar una sentencia with, esta nos permite abrir un archivo y luego cerrarlo automáticamente.
+            </p>
+
+            <h3>
+                Leer archivos con sentencia with
+            </h3>
+
+            <p>
+                La sintaxis de la sentencia with para leer un archivo es como la mostrada en la siguiente imagen. Primero escribimos la palabra clave with, luego hacemos una llamada a la función open, y dentro del paréntesis escribimos como primer parámetro el nombre del archivo a leer con su extensión correspondiente, luego un segundo parámetro se escribe una cadena de caracteres de una sola letra (r en este caso), esta letra denota el modo de apertura del archivo, es decir, cómo se va a abrir el archivo y para qué se va a usar (veremos los modos con más detalle en un momento). Para leer el archivo utilizamos la letra r como segundo parámetro o omitimos dicho parámetro, ya que la r es el parámetro por defecto en la función open. Luego cerramos el paréntesis de la función, va un espacio, la palabra clave 'as' y finalmente un nombre de una variable, el nombre de la variable es escogido por nosotros. Lo que se hace es asignar la representación del archivo en el código a esa variable (la representación es la parte en que copiamos le nombre y el modo de apertura).
+            </p>
+
+            <p>
+                La variable creada en la sentencia podrá ser utilizada en su cuerpo para trabajar con el archivo. Todas las líneas de código en el cuerpo de la sentencia deben estar indentadas, luego de que termine la indentación se asumirá que se dejó de trabajar con el archivo y se cerrará automáticamente, esta es la ventaja de trabajar con una sentencia with.
+            </p>
+
+            <img src="../img/sentencia-with-para-leer-archivo.png" alt="Sentencia with para leer archivo" title="Sentencia with para leer archivo" width="50%">
+            
+            <p>
+                Si utilizamos un ciclo for en un archivo de texto, el ciclo iterará con cada línea del archivo, veremos un ejemplo con las siguientes imágenes, iteraremos las líneas del archivo para que se muestren, primero veamos qué contiene el archivo en la siguiente imagen. Es muy importante mencionar que debemos ejecutar el archivo en el idle de python (la consola interactiva), al ejecutarlo en VScode no funciona correctamente
+            </p>
+
+            <img src="../img/contenido-archivo-texto.png" alt="Contenido del archivo .txt" title="Contenido del archivo .txt" width="50%">
+            
+            <P>
+                A continuación veremos 3 imágenes, la sentencia with con dos parámetros, la sentencia with con un solo parámetro y el resultado de el código al ser ejecutado, se muestra solo una imagen de resultado porque en ambos casos es el mismo resultado.
+            </P>
+            
+            <img src="../img/with-2-parámetros.png" alt="Sentencia with con dos parámetros" title="Sentencia with con dos parámetros" width="50%">
+            
+            <img src="../img/with-1-parámetro.png" alt="Sentencia with con un parámetro" title="Sentencia with con un parámetro" width="50%">
+            
+            <img src="../img/with-resultado.png" alt="Resultado de las sentencias with" title="Resultado de las sentencias with" width="50%">
+
+            <p>
+                Ver archivo <a href="../python/24. archivo-lectura.py">24. Archivo-lectura.py</a> para ver programa.
+            </p>
+
+            <h3>
+                Modos de apertura de archivos
+            </h3>
+
+            <p>
+                Hay distintos modos de apertura de archivo según lo que queramos hacer en nuestro programa. En la imagen siguiente se verá de forma resumida cuáles son y posteriormente explicaremos cada uno.
+            </p>
+
+            <img src="../img/modos-apertura.png" alt="Modos de apertura de archivos" title="Modos de apertura de archivos" width="50%">
+            
+            <dl>
+                <dt>
+                    r (read - leer)
+                </dt>
+                <dd>
+                    Este se utiliza para leer el contenido del archivo.
+                </dd>
+
+                <dt>
+                    w (write - escribir)
+                </dt>
+                <dd>
+                    Si queremos escribir en el archivo y modificar su contenido utilizamos w. Este modo de apertura va a reemplazar completamente el contenido del archivo, así que debemos estar seguros de que no queremos conservar nada del contenido de ese archivo.
+                </dd>
+
+                <dt>
+                    a (append - añadir)
+                </dt>
+                <dd>
+                    Esto nos permite agregar contenido al final del archivo sin modificar el contenido existente.
+                </dd>
+
+                <dt>
+                    Agregar un + incluye leer. Por ejemplo, w+ es leer y escribir.
+                </dt>
+                <dd>
+                    Podemos utilizar el signo de suma para agregar el modo de lectura.
+                </dd>
+            </dl>
+            
+            <p>
+                Python nos da una capa de seguridad por medio de estos modos de apertura, dependiendo de nuestra intención, podremos evitar modificaciones accidentales en el archivo por ejemplo. Si no queremos modificar utilizamos r, si queremos modificar utilizamos w, en sí lo que hacemos es proteger el contenido del archivo para no dar más permisos de los necesarios al programa.
+            </p>
+
+            <h3>
+                Modificar archivos con sentencia with
+            </h3>
+
+            <p>
+                Hay dos formas de hacer este proceso, reemplazar el contenido del archivo totalmente o añadir contenido al archivo al final. 
+            </p>
+            
+            <p>
+                En la siguiente imagen veremos una sentencia with creada para reemplazar el contenido del archivo.
+            </p>
+
+            <img src="../img/with-escribir.png" alt="Sentencia with para escribir en el archivo" title="Sentencia with para escribir en el archivo" width="50%">
+            
+            <p>
+                Posteriormente utilizamos el método .write de la variable creada en la sentencia with, entre paréntesis se copiará el contenido que se quiere utilizar para reemplazar el contenido inicial o existente del archivo.
+            </p>
+
+            <img src="../img/metodo-write.png" alt="Metodo write" title="Metodo write" width="50%">
+            
+            <p>
+                En el siguiente código hay un ejemplo de un archivo a ser modificado, se utiliza un diccionario para esto (es importante tener en cuenta que si el archivo no existe, se creará). El diccionario contiene llaves que son nombres de alumnos, dichas llaves tienen como valor sus notas, luego en el cuerpo de la sentencia open se itera sobre cada llave y valor con un ciclo for, utilizándose dichos datos para crear una lista de los nombre de los alumnos separados de las notas con un guión. AL final se agrega el conjunto de caracteres \n como cadena de texto, esto se utiliza para representar un salto de línea con cada línea agregada en el archivo.
+            </p>
+            
+            <img src="../img/ejemplo-with-write.png" alt="Ejemplo de código para escribir en un archivo" title="Ejemplo de código para escribir en un archivo" width="50%">
+            
+
+            <p>
+                Ver archivo <a href="../python/25. archivo-escritura.py">25. archivos-escritura.py</a> para ver programa.
+            </p>
+            
+            <p>
+                En la siguiente imagen veremos una sentencia with creada para añadir más contenido al archivo creado con el código anterior, se utilizará un diccionario distinto como si quiesieramos agregar más notas al documento.
+            </p>
+
+            <img src="../img/with-agregar.png" alt="Sentencia with para añadir contenido" title="Sentencia with para añadir contenido" width="50%">
+            
+            <p>
+                En la siguiente imagen veremos un código que nos permitirá añadir más contenido al final del archivo que creamos en el ejemplo de la sentencia with para escribir en un documento reemplazando todo su contenido o crear un documento si no existe. En ambas formas de modificación de archivo utilizamos el método .write de la variable creada en la sentencia with.
+            </p>
+            
+            <img src="../img/ejemplo-with-añadir.png" alt="Ejemplo de código para añadir más contenido" title="Ejemplo de código para añadir más contenido" width="50%">
+            
+            <p>
+                Ver archivo <a href="../python/26. archivo-añadir.py">26. archivo-añadir.py</a> para ver programa.
+            </p>
+
+            <p style="color: red; font-weight: bolder;">
+                RECORDAR QUE SE DEBEN EJECUTAR ESTOS CÓDIGOS PARA MODIFICAR O LEER ARCHIVOS EN LA CONSOLA INTERACTIVA.
+            </p>
+        </section>
     </main>
 </body>
 </html>
