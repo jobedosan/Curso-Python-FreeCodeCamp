@@ -2393,9 +2393,102 @@
             <p>
                 Ver archivo <a href="../python/26. archivo-añadir.py">26. archivo-añadir.py</a> para ver programa.
             </p>
-
+            
             <p style="color: red; font-weight: bolder;">
                 RECORDAR QUE SE DEBEN EJECUTAR ESTOS CÓDIGOS PARA MODIFICAR O LEER ARCHIVOS EN LA CONSOLA INTERACTIVA.
+            </p>
+        </section>
+        
+        <hr>
+        
+        <section>
+            <h2>
+                Importaciones
+            </h2>
+
+            <p>
+                Las importaciones son importantes para cuando nuestro programa crezca en tamaño y complejidad. Cuando escribimos un programa de Python, lo lógico y natural es que el programa crezca a medida que agreguemos nuevas funciones y capacidades. Cuando el programa va creciendo, conseguir los distintos elementos va a ser cada vez más difícil si lo escribimos todo en un mismo archivo. Así que lo que hacemos es separar las distintas partes o elementos contenidos en el archivo en distintos móduclos, es decir, distintos archivos que luego vamos a juntar en un archivo principal, pero los vamos a tener separados. Cada uno de los archivos va a ser independiente y va a contener código relacionado.
+            </p>
+
+            <p>
+                Un módulo es un archivo Python que contine definiciones y sentencias, entonces es simplemente un archivo que definimos funciones, elementos, variables, constantes y también pueden contener código. Todos los elementos de un módulo se busca que estén relacionados para que pertenezcan al mismo módulo, y al trabajar con los módulos, vamos a tener un programa principal donde vamos a importar cada uno d elos módulos que necesitemos. Así mantenemos el código en archivos separados pero los podemos usar como si estuvieran en el mismo archivo. Esto hará que nuestro código sea mucho más mantenible y reusable, porque también podemos reutilizar los módulos en distintos proyectos.
+            </p>
+
+            <p>
+                La importación consiste en una sentencia que da acceso a las funciones y constantes definidas en el módulo importado, a continuación veremos un ejemplo de la sintaxis utilizada para importar un módulo, la imagen es la estructura utilizada para crear una sentencia de importación en nuestro código.
+            </p>
+
+            <img src="../img/sentencia-importacion.png" title="sentencia de importación" alt="sentencia-importacion" width="50%">
+            
+            <p>
+                Como vemos en el ejemplo anterior, debe utilizarse la palabra clave import (esta dice al programa que importaremos un módulo específico), luego se copia un espacio seguido de el nombre del módulo que queremos importar. Normalmente la sentencia de importación es la primera línea de código en el programa, o el grupo de sentencias import deberían ser las primeras líneas de código en cada programa, en cada archivo donde haya una sentencia de importación. 
+            </p>
+            
+            <p>
+                Luego cuando necesitamos llamar a una función que esté definida en el módulo importado, lo podremos hacer con la siguiente sintaxis (se ve en la siguiente imagen) que consiste en copiar el nombre del módulo, un punto (.), nombre de la función y paréntesis de la función a donde pasamos los argumentos que necesita (si los tiene).
+            </p>
+            
+
+            <img src="../img/llamada-funcion-modulo.png" title="llamada a función de módulo" alt="llamada a función de módulo" width="50%">
+            
+            <p>
+                Python tiene muchos módulos incorporados, veamos un ejemplo real del uso de un módulo ya integrado en Python, importaremos el módulo math, el cual tiene funciones matemáticas. Importaremos ese módulo y utilizaremos su función pow, que viene de power que significa exponente, exponenciación o elevar a una potencia en inglés (en matemáticas). En la siguiente imagen podemos ver que la primera línea importa el módulo, la segunda línea accede a la función pow y se le pasan dos argumentos, el primer número es el número a ser elevado y el segundo número es el exponente. Colocamos 9 y 2, es decir que dicha función nos dirá el resultado de 9 al cuadrado, dándonos como resultado 81.
+            </p>
+            
+            <img src="../img/importacion-modulo-math.png" title="importación del módulo math" alt="importación del módulo math" width="50%">
+            
+            <p>
+                Así podemos reutilizar código que otros desarrolladores o nosotros mismos hemos escrito en el pasado, y podremos escribir código que es mucho más fácil de mantener a medida que la complejidad y el tamaño del programa crecen.
+            </p>
+            
+            <p>
+                Para acceder a una constante importada de un módulo debemos escribir el nombre del módulo, punto (.) y el nombre de la constante a la que queremos acceder. Un ejemplo de esto es la constante pi, que se encuentra también en el móduclo math de Python. Se puede ver en el siguiente ejemplo. Este valor puede ser utilizado entonces en cualquier parte de nuestro programa.
+            </p>
+            
+            <img src="../img/math.pi.png" title="acceso a constante de un módulo" alt="acceso a constante de un módulo" width="50%">
+            
+            <p>
+                Hay otra forma de importar que nos da la oportunidad de asignar un nombre alternativo al módudulo, consiste en colocar la palabra import, espacio, nombre del módulo, palabra reservada as, nombre alternativo a asignar; como se puede ver en el siguiente ejemplo. 
+            </p>
+
+            <img src="../img/import-nombre-alternativo.png" title="Importación con nombre alternativo" alt="Importación con nombre alternativo" width="50%">
+            
+            <p>
+                De esta manera podremos utilizar el nombre alternativo para acceder a las funciones y constantes de un módulo, como se puede ver en los siguientes ejemplos accedemos de nuevo a la función pow de math, pero utilizando el nombre matematicas (en la primera imagen se ve la sintaxis y en la segunda el ejemplo real).
+            </p>
+            
+            <img src="../img/llamada-funcion-constante-modulo-nombre-alternativo.png" title="Sintaxis para llamar función o constante de módulo con nombre alternativo" alt="Sintaxis para llamar función o constante de módulo con nombre alternativo" width="50%">
+            
+            <img src="../img/ejemplo-real-importacion-nombre-alternativo.png" title="Ejemplo de llamada a función de módulo con nombre alternativo" alt="Ejemplo de llamada a función de módulo con nombre alternativo" width="50%">
+            
+            <p>
+                Otra opción con la cual podemos realizar importación consiste en utilizar la palabra from, nombre de módulo, import, nombre de elemento. Esta forma nos permite importar un elemento único del módulo en lugar el módulo completo, obviamente será útil si no necesitamos el resto del módulo, la sintaxis se puede ver en la siguiente imagen.
+            </p>
+            
+            <img src="../img/importacion-elemento-unico.png" title="Importación de elemento único del módulo" alt="Importación de elemento único del módulo" width="50%">
+            
+            <p>
+                En el siguiente ejemplo se importa solamente la función pow del módulo math, luego de importar esa función, podremos utilizar la función pow directamente en nuestro programa sin especificar el módulo del cuál proviene. Todo esto se puede ver en el siguiente ejemplo.
+            </p>
+            
+            <img src="../img/importacion-elemento-unico-ejemplo-real.png" title="Importación de elemento único del módulo, ejemplo real con pow" alt="Importación de elemento único del módulo, ejemplo real con pow" width="50%">
+            
+            <p>
+                Normalmente la primera sintaxis es la más utilizada y recomendada, porque especificamos el nombre del módulo al cual pertenece la función y eso hace que el código sea más fácil de mantener, corregir y leer. 
+            </p>
+            
+            <p>
+                A continuación mostramos una sintaxis que aunque es válida y funciona no es nada recomendada. Consiste en la palabra from, nombre de módulo, import y un asterísco (*), el asterísco indica que se importarán todos los elementos del módulo, con esto podremos utilizar todas las funciones y variables del módulos sin señalar a cada momento el nombre del módulo al que pertenecen. 
+            </p>
+
+            <img src="../img/importacion-de-todos-elementos.png" title="Importación de todos los elementos con from" alt="Importación de todos los elementos con from" width="50%">
+
+            <p>
+                Esta práctica puede crear muchas confusiones en el programa, sobre todo si ya tenemos otros elementos con nombres iguales o nombres parecidos definidos en el módulo como tal o en el programa, así que no se recomienda dicha sintaxis.
+            </p>
+            
+            <p>
+                Ver archivo <a href="../python/27. importaciones.py ">27. importaciones.py</a> para ver programa.
             </p>
         </section>
     </main>
