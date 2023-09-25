@@ -2491,6 +2491,185 @@
                 Ver archivo <a href="../python/27. importaciones.py ">27. importaciones.py</a> para ver programa.
             </p>
         </section>
+
+        <hr>
+
+        <section>
+            <h2>
+                Errores y excepciones
+            </h2>
+
+            <p>
+                A continuación hablaremos de las distintas excepciones y errores que pueden ocurrir cuando estamos ejecutando nuestro programa de python y cómo podemos manerjarlo.
+            </p>
+
+            <h3>
+                SyntaxError
+            </h3>
+
+            <p>
+                SyntaxError es un error de sintaxis del programa. Ocurre cuando no se siguen las reglas formales para escribir código en Python. Otra forma de error de sintaxis es la que se presenta como una ventana emergente que dice invalid syntax. Los ejemplos más sencillos de error de sintaxis puede ser escribir un operador mal (escribir =+ en lugar de +=, por ejemplo), olvidar colocar dos puntos al final de una condición if, utilizar distitos tipos de comillas parra un string (comilla simple combinada con comilla doble), error de indentación también es un error de sintaxis, aparecerá un letrero que dice expected and indented block en este último caso.
+            </p>
+
+            <h3>
+                Excepción
+            </h3>
+
+            <p>
+                Una excepción es un error detectado durante la ejecución de un programa. Las excepciones ocurren cuando el programa ya se ha verificado, la sintaxis está correcta pero cuando el programa inicia su ejecución, y durante esa ejecución, se detecta un error, haciendo que el programa se detenga abruptamente.
+            </p>
+
+            <h4>
+                IndexError
+            </h4>
+
+            <p>
+                Esta excepción ocurre cuando intentamos acceder a una cadena de caracteres utilizando un índice que está más allá del rango permitido.
+            </p>
+
+            <img src="../img/index-error.png" title="IndexError" alt="IndexError" width="50%">
+            
+            <h4>
+                KeyError
+            </h4>
+
+            <p>
+                Esta excepción aparece cuando estamos trabajando con diccionarios, el KeyError o error de clave ocurre cuando intentamos acceder a una clave que no existe en el diccionario.
+            </p>
+
+            <img src="../img/KeyError.png" title="IndexError" alt="IndexError" width="50%">
+            
+            <h4>
+                NameError
+            </h4>
+            
+            <p>
+                Esta excepción se genera cuando el nombre de una variable no se reconoce, es decir, cuando la variable no ha sido definida previamente en el programa
+            </p>
+            
+            <img src="../img/NameError.png" title="NameError" alt="NameError" width="50%">
+
+            <h4>
+                ZeroDivisionError
+            </h4>
+
+            <P>
+                Otra excepción que podemos conseguir cuando trabajamos con operadores aritméticos es ZeroDivisionError o error de división por cero, ocurre cuando tratamos de dividir un número entre 0.
+            </P>
+            
+            <img src="../img/ZeroDivisionError.png" title="ZeroDivisionError" alt="ZeroDivisionError" width="50%">
+            
+            <h4>
+                RecursionError
+            </h4>
+
+            <p>
+                Esta excepción ocurre cuando hay un error en una función recursiva, en el ejemplo podemos ver que el caso base es correcto, sin embargo, el parámetro que se pasa cuando se hace la llamada recursiva no se está disminuyendo, por lo tanto el proceso recursivo nunca va a llegar al caso base.
+            </p>
+            
+            <img src="../img/RecursionError.png" title="RecursionError" alt="RecursionError" width="50%">
+            
+            <p>
+                Luego de ejecutar la función anterior nos aparecerá el siguiente texto que dice al final: Máxima produndidad de recursión excedida en comparación, es decir, el proceso de recursión hizo el máximo número de llamadas recursivas que puede hacer sin llegar al caso base.
+            </p>
+            
+            <img src="../img/RecursionError-example.png" title="RecursionError ejemplo" alt="RecursionError ejemplo" width="50%">
+            
+            <p>
+                Es importante aprender a leer y reconocer estos errores cuando trabajamos con Python, porque así podremos hacer correcciones adecuadas, en programación, a estos errores de lógica que pueden llegar a tener nuestros programas se les denomina bugs.
+            </p>
+
+            <p>
+                Ver archivo <a href="../python/28. excepciones.py">28. excepciones.py</a> para ver programa.
+            </p>
+            
+            <h3>
+                Estructura try-except
+            </h3>
+            
+            <p>
+                Las excepciones anteriores detendrán nuestro programa abruptamente, mostrando los letreros de error vistos anteriormente, pero hay una forma de manejar la excepciones adecuadamente para evitar que el programa se termine tan abruptamente. Para esto se utiliza una estructura denominada try-except. Esto nos permite manejar las excepciones a medida que ocurren en el programa cuando podrían, en tal caso, ocurrir y así escoger cómo las manejamos.
+            </p>
+
+            <p>
+                En la siguiente imagen podremos ver la lógica básica del try except, primero intentamos ejecutar el código perteneciente a la cláusulas try (dicho código debe estar indentado). Mientras se ejecuta ese primer código, si llega a aparecer alguna excepción, se detiene el proceso inmediatamente y se ejecuta el código de la cláusula except.
+            </p>
+            
+            <img src="../img/try-except.png" title="try-except sintaxis" alt="try-except sintaxis" width="50%">
+            
+            <p>
+                A continuación mostramos un ejemplo de un código real donde le pedimos a un usuario 2 números que serán divididos (el primero entre el segundo). En este código no podemos controlar el número ingresado por el usuario, si el usuario llega a poner 0, se generará un ZeroDivisionError, se usa el try-except para que cuando esto ocurra se imprima un texto que dice "Alerta, Excepción.". Es una muestra clara de cómo podríamos utilizar esta estructura, en lugar de la notificación podríamos colocar un texto que indique que se ingresó un 0 y que dicha división es imposible, pidiendo otro número al usuario, por ejemplo.
+            </p>
+            
+            <img src="../img/try-except-example.png" title="try-except ejemplo" alt="try-except ejemplo" width="50%">
+            
+            <p>
+                También podemos especificar qué tipo de excepción queremos manejar, por ejemplo si queremos manejar el error de ZeroDivisionError, podemos escribirlo con la sintaxis mostrada en la siguiente imagen. Entonces, cuando la excepción se presenta en el código de la cláusula try, será que se pasará a ejecutar el código de la cláusula except. Como se menciona, en este caso solo se ejecutará en el except cuando se presente la excepción indicada.
+            </p>
+            
+            <img src="../img/try-except-específico-sintaxis.png" title="try-except específico" alt="try-except específico" width="50%">  
+            
+            <p>
+                En la siguiente imagen podremos ver un código idéntico al que se mostró como primer ejemplo real de la estructura try-except, la diferencia es que en el siguiente código podremos ver que se especificó la excepción que se tomará en cuenta para proceder a ejecutar el código de la cláusula except, si la excepción que aparece en el código de la cláusula try no es de tipo ZeroDivisionError, el código de except no se ejecutará. Debe ser obligatoriamente un error ZeroDivisionError. En Python es mucho mejor ser explicito, por eso esta versión de la estructura try-except es mejor que simplemente escribir except para manejar todas las excepciones posibles.
+            </p>
+            
+            <img src="../img/try-except-específico-sintaxis-example.png" title="try-except específico ejemplo real" alt="try-except específico ejemplo real" width="50%"> 
+            
+            <p>
+                Es importante mencionar que también podemos tener multiples cláusulas except para manejar distintos tipos de excepciones de manera distinta según nuestras necesidades. Para esto se escriben cada cláusula except una debajo de otra, siempre debajo de la cláusula try.
+            </p>
+            
+            <p>
+                Otra alternativa que podemos usar es asignar la excepción a una variable para poder usarla y trabajar con ella en el código perteneciente a la cláusula except. Las excepciones también son objetos en Python, son elementos que tienen sus propias características como descripción y distintos tipos de data, así que podemos utilizarlo para tener más información sobre lo que ocurrió. Podemos ver la sintaxis de esta alternativa en la siguiente imagen.
+            </p>
+
+            <img src="../img/try-except-especifico-variable.png" title="try-except específico con variable sintaxis" alt="try-except específico con variable sintaxis" width="50%"> 
+            
+            <p>
+                En la siguiente imagen podremos ver un ejemplo de una excepción asignada a una variable, en caso de que se ejecute el except, el programa imprimirá el nombre del tipo de excepción que se produjo, imprimirá "division by zero" para ser específicos.
+            </p>
+            
+            <img src="../img/try-except-especifico-variable-real.png" title="try-except específico con variable ejemplo" alt="try-except específico con variable ejemplo" width="50%"> 
+            
+            <p>
+                Además también tenemos una cláusula else que podemos agregar en la estructura try-except, esta funciona como respaldo al igual que en los condicionales, Si no ocurrió una excepción en 'try', se ejecutará el código contenido por la cláusula else. Se puede ver un ejemplo de la sintaxis en la siguiente imagen.
+            </p>
+            
+            <img src="../img/try-except-else-sintaxis.png" title="try-except con else sintaxis" alt="try-except con else sintaxis" width="50%"> 
+            
+            <p>
+                A continuación veremos una imagen de un código con cláusula else, si ocurre una excepción de tipo ZeroDivisionError en el código de 'try' se ejecutará el except, imprimiendo la excepción asignada a la variable e, y no se ejecutará el else. En caso de que no se presente ninguna excepción en 'try', se muetras el resultado de la división y se ejecuta el código contenido por la cláusula else, en este caso se imprimirá el texto Else, porque es la instrucción que se dió en esa cláusula.
+            </p>
+            
+            <img src="../img/try-except-else-ejemplo.png" title="try-except con else ejemplo" alt="try-except con else ejemplo" width="50%"> 
+            
+            <p>
+                Por último tenemos la cláusula finally, esta nos permite ejecutar código independientemente de si ocurrió una excepción o no. Es una cláusula que se utiliza normalmente para operaciones que deben ocurrir siempre, por ejemplo, cerrar un archivo.
+            </p>
+            
+            <img src="../img/try-except-finally-sintaxis.png" title="try-except-finally sintaxis" alt="try-except-finally sintaxis" width="50%"> 
+            
+            <p>
+                En la siguiente imagen podremos ver un ejemplo real de la cláusula finally. En este caso, independientemente de que ocurra una excepción en 'try', se imprimirá la palabra Finally, pues es la instrucción que se diió en la cláusula finally.
+            </p>
+
+            <img src="../img/try-except-finally-example.png" title="try-except-finally ejemplo" alt="try-except-finally ejemplo" width="50%"> 
+            
+            <p>
+                A continuación se muestra la estructura para controlar las excepciones en caso de estar todas las cláusulas posibles.
+            </p>
+            
+            <img src="../img/try-except-else-finally.png" title="try-except-else-finally" alt="try-except-else-finally" width="50%"> 
+
+            <p>
+                La cláusula finally siempre va luego de else (si existe); la cláusula else es opcional, si no existe, se escribe finally directamente después de la cláusula except. En la imagen anterior se ve una descripción de la lógica básica de toda esta estructura.
+            </p>
+
+            <p>
+                Ver archivo <a href="../python/29. try-except.py">29. try-except.py</a> para ver programa.
+            </p>
+            
+        </section>
     </main>
 </body>
 </html>
