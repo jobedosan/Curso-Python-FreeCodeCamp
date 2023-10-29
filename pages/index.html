@@ -2677,9 +2677,358 @@
             <h2>
                 Programación orientada a objetos
             </h2>
+
             <p>
-                Ver archivo <a href="../python/29. try-except.py">29. try-except.py</a> para ver programa.
+                A continuación veremos una breve introducción a la programación orientada a objetos, el tema es mucho más amplio, por lo que esto es una pequeña introducción.
             </p>
+
+            <p>
+                Hasta ahora hemos estado escribiendo programas que se ejecutan línea por línea, incluyendo ciclos, condicionales, etc. Han sido programas sencillos de leer y cada uno de los comandos en los programas se ejecutan tal cual  y como nosotros lo especificamos, pero existen otros paradigmas de programación, otras formas de estructurar nuestro código y de representar cómo queremos crear el programa y resolver un problema. 
+            </p>
+
+            <p>
+                La programación orientada a objetos es un paradigma de programación específico, en el cual nosotros representamos objetos, entidades o conceptos de la vida real o abstractos en nuestro código. Tomamos las características de estos objetos que necesitamos representar y escribimos código para poder utilizar los objetos directamente en nuestro programa.
+            </p>
+
+            <p>
+                En programación orientada a objetos básicamente creamos planos, creamos una especie de plano que va a permitirnos representar un objeto y crear muchos objetos del mismo tipo.
+            </p>
+
+            <p>
+                Por ejemplo en un sistema de un colegio, podemos representar un estudiante con un plano específico en nuestro programa y podemos crear muchos estudiantes con ese plano en el sistema, para representar a cada uno de los estudiantes del colegio, y guardar sus características principales, como nombre, apellido, notas, clases, contactos y todo lo que necesitemos que sea relevante para nuestro sistema.
+            </p>
+
+            <h3>
+                Clases
+            </h3>
+
+            <p>
+                Los planos con los que podemos representar objetos son denominados clases. Las clases nos permiten representar en forma general los atributos y funcionalidad de un objeto. La funcionalidad, técnicamente, en la parte de software se representa como métodos.
+            </p>
+
+            <p>
+                Los métodos son muy similares a funciones pero van a estar relacionados con un objeto en particular, y los atributos son valores que van a tener los objetos en el programa.
+            </p>
+
+            <p>
+                A continuación vamos a ilustrar los conceptos mencionados anteriormente respecto a la programación orientada a objetos con una cuenta bancaria. 
+            </p>
+
+            <p>
+                Digamos que estamos creando un sistema para un pequeño banco que está abriendo su primera sede. Debemos diseñar un plano para una cuenta bancaria muy sencilla que solamente va a tener unos cuantos atributos; este plano va a ser representado por una clase en el código.
+            </p>
+
+            <h4>
+                Las cuentras tendrán los siguientes atributos:
+            </h4>
+            <ul>
+                <li>
+                    Número de cuenta
+                </li>
+                <li>
+                    Nombre del titular 
+                </li>
+                <li>
+                    Balance inicial
+                </li>
+                <li>
+                    Balance actual
+                </li>
+                <li>
+                    Fecha de apertura   
+                </li>
+                <li>
+                    Etc.
+                </li>
+            </ul>
+
+            <p>
+                Además de los atributos anteriores, la calse debe tener cualquier dato relevante para el sistema. A continuación, procederemos a explicar cómo crear las clases.
+            </p>
+
+            <p>
+                 Primero debemos escribir la palabra clave class, esto le dice a Python que estamos tratando de definir un tipo de objeto nuevo, una clase nueva. Luego escribimos un espacio en blanco seguido del nombre de la clase; el estándar para escribir el nombre de una clase en Python es comenzar con una letra mayúscula, y cada palabra dentro del texto comenzará con mayúscula para separarlas visualmente, esto por las convensiones de la comunidad de Python y la guía de estilo del lenguaje. Luego del nombre de la clase escribimos dos puntos (:). Un ejemplo de la sintaxis es <b>class CuentaBancaria:</b>.
+            </p>
+
+            <p>
+                Si hacemos esto en la consola interactiva, al presionar enter luego de los dos puntos, se creará una indentación automáticamente. Ahora debemos comenzar a crear los atributos de la cuenta bancaria, para comenzar a crear los atributos de la cuenta bancaria utilizamos el siguiente método especial: def __init__():. La función anterior estará asociada a cada cuenta bancaria, y nos permitirá inicializar o asignarle un valor inicial a los atributos de la cuenta, la función __init__() es la función de inicialización. Es importante resaltar que utilizamos la palabra def seguido de doble guión bajo, la palabra init, doble guión bajo, espacio, paréntesis y dos puntos (:). La palabra init proviene de initialization.
+            </p>
+
+            <p>
+                Dento del paréntesis vamos a escribir el primer parámetro que se llamará self, self va a estar relacionado con un concepto llamado instancia, va a estar relacionado con cada cuenta bancaria que creemos a partir del plano (en un momento hablaremos más a profundiad sobre las instancias). Posteriormente y separados por coma se copian el resto de parámetros que se desean para poder personalizar el valor de cada uno de los atributos de la cuenta bancaria cuando las creemos, crearemos un parámetro para el numero de cuenta, para el nombre del titular y el balance, a continuación se muestra cómo es la sintaxis de este proceso. 
+            </p>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                        </b>
+                    </code>
+                </pre>
+            </p>
+            
+            <P>
+                Luego para definir los atributos inicialmente debemos escribir la palabra self seguida de un punto (.), el nombre del atributo que queremos agregar a la cuenta bancaria y le asignamos el valor num_cuenta. Realizaremos lo mismo con el resto de parámetros que habíamos colocado dentro del paréntesis.
+            </P>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                                    self.num_cuenta = num_cuenta
+                                    self.nombre_titular = nombre_titular
+                                    self.balance = balance
+                        </b>
+                    </code>
+                </pre>
+            </p>
+
+            <p>
+                Hasta ahora colocamos 3 parámetros dentro del paréntesis (num_cuenta, nombre_titular y balance), esto nos va a permitir personalizar valores para cada uno de esos atributos de la cuenta. Estos parámetros son simplemente variables locales, igual que los parámetros de una función. Los parámetros mencionados son los que usamos para asignar los valores a cada parámetro de la cuenta. Los parámetros son las líneas de self.seguidos del nombre del parámetro, cada línea tiene asignado su respectivo parámetro como valor. Todo este proceso va a ser muy importante cuando comencemos a crear instancias.
+            </p>
+
+            <p>
+                Con todo lo anterior habreos definido los atributos de la clase, así que comenzaremos a ver los otros elementos de la clase, que son las funcionalidades.
+            </p>
+
+            <h4>
+                La cuenta tendrá las siguientes funcionalidades:
+            </h4>
+
+            <ul>
+                <li>
+                    Retirar
+                </li>
+                <li>
+                    Depositar
+                </li>
+                <li>
+                    Generar balance
+                </li>
+                <li>
+                    Actualizar datos
+                </li>
+                <li>
+                    Etc.
+                </li>
+            </ul>
+            
+            <p>
+                Las clases, es decir, los planos que usamos para representar los objetos, también pueden utilizarse para representar la funcionalidad del objeto en el sistema. Solo representamos las funcionalidades que son relevantes para nuestro sistema. Como se puede ver en la lista anterior, con una cuenta bancaria podemos retirar, depositrar, generar balance o actualizar datos, estas con las funciones relevantes para el sistema del ejemplo.
+            </p>
+
+            <p>
+                En este caso, vamos a crear una funcionalidad que nos permita mostrar el balance en la consola. Vamos a comenzar a implementarlo, para esto es importante recordar que la palabra self está relacionada con la instancia actual. La instancia es cada una de las cuentas bancarias que vamos a crear a partir del plano, al igual que podemos crear cientos de casas con un mismo plano, vamos a crear muchísimas cuentas bancarias en nuestro sistema a partir del plano inicial.
+            </p>
+
+            <p>
+                Volveremos a la clase que creamos y comenzaremos a definir un método llamado generar_balance, para esto utilizamos la palabra def, seguida de un espacio, el nombre del método, paréntesis, parámetro dentro del paréntesis y dos puntos (:).
+            </p>
+
+            <p>
+                Cuando trabajamos con clases, cada uno de los métodos debe tener un parámetro que se denomina self, este parámetro nos va a permitir trabajar con la data de cada una de las cuentas bancarias, porque vamos a escribir código que aplica para todas las cuentas bancarias que creemos. Por ejemplo, si queremos mostrar el balance de una cuenta bancaria específica, podemos utilizar el valor self y mostrarlo. Para esto escribiríamos en el cuerpo del método print(self.balance), utilizamos un punto para hacer referencia al atributo balance. En el siguiente código se puede ver el resultado de crear el método generar_balance.
+            </p>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                                    self.num_cuenta = num_cuenta
+                                    self.nombre_titular = nombre_titular
+                                    self.balance = balance
+                                
+                                def generar_balance (self):
+                                    print(self.balance)
+                        </b>
+                    </code>
+                </pre>
+            </p>
+
+            <p>
+                Ya con lo anterior habremos creado un método para la clase cuenta bancaria, a continuación repetiremos el mismo proceso, pero para crear las otras funcionalidades de las que habíamos hablado anteriormente. Sin embargo, es importante mencionar que el parámetro self puede no ser el único parámetro de un método, cuando se necesita más de un parámetro, es importante recordar que self debe ser el primer parámetro siempre, recordemos que el self se usa para hacer referencia a una cuenta bancaria en específico. Los parámetros se separan por una coma.
+            </p>
+
+            <p>
+                Agregaremos la función depositar a nuestra clase CuentaBancaria, para esto necesitamos un parámetro adicional a self, porque tenemos que saber qué monto depositará el usuario, luego en el cuerpo d ela función lo que se hará será actualizar el valor del balance, incrementandolo con el valor del monto depositado. Preferiblemente deberíamos cerciorarnos de que el monto depositado es mayor que cero, para que así si se proceda a incrementar el valor del balance. Para cerciorarnos de esto utilizaremos una cláusula if y ya, que verifique que el monto es mayor que cero.
+            </p>
+
+            <p>
+                El código quedaría de la siguiente forma:
+            </p>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                                    self.num_cuenta = num_cuenta
+                                    self.nombre_titular = nombre_titular
+                                    self.balance = balance
+                                
+                                def generar_balance (self):
+                                    print(self.balance)
+
+                                def depositar(self, monto):
+                                    if monto > 0:
+                                        self.balance += monto
+                        </b>
+                    </code>
+                </pre>
+            </p>
+
+            <p>
+                Ya con el código anterior ya habremos una clase que representa una cuenta bancaria, con sus atributos iniciales (número de cuenta, nombre del titular y balance) y dos métodos (uno para mostrar el balance de la cuenta y otro para incrementar el balance actual de la cuenta al hacer un depósito).
+            </p>
+
+            <p>
+                Ahora veamos un poco más sobre el concepto de instancia, porque no lo hemos visto en detalle hasta ahora. A paprtir del plano que creamos anteriormente (la clase) podemos generar muchas instancias, cada una de eesas instancias representa una cuenta bancaria, con su propio número, su propio titular y su propio balance.
+            </p>
+
+            <p>
+                Pero estamos representando todo ese código general, todo lo que puede aplicar a cada una de esas instancias en nuestro plano, para representar en general una cuenta bancaria.
+            </p>
+
+            <p>
+                Recordemos el concepto instancias, cada una de las instancias tiene atributos independientes, es decir, si actualizamos el atributo de alguna de esas instancias, los atributos de las otras no serán afectados. Por ejemplo, cambiar el titular de una cuenta, no cambia el titular de otras cuentas en el sistema, esto pasa cuando usamos atributos de instancias.
+            </p>
+
+            <p>
+                Siempre tenemos que tener presente que donde veamos self en el plano, en la clase del código, hacemos referencia a la instancia actual, la instancia que se está creando, la instancia que está llamando un método específico o la instancia que se está modificando.
+            </p>
+
+            <p>
+                A continuación veremos cómo se pueden crear instancias en un programa, crearemos una instancia llamada mi_cuenta, para esto escribimos el nombre de la instancia, seguida de un operación de asignación, luego el nombre de la clase, paréntesis y dentro del paréntesis deben agregarse los valores necesarios para esa instancia, en este caso son 3, número de cuenta, nombre del titular y balance. Se hace en ese orden porque así lo establecimos al crear la clase. Self siempre se omite cuando vamos a llamar un método o cuando vamos a crear una instancia, simplemente se asume que el parámetro self ya tiene un valor porque ya lo tiene detrás de escena.
+            </p>
+
+            <p>
+                A continuación se muestra la creación de una instancia con los pasos mencionados anteriormente.
+            </p>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                                    self.num_cuenta = num_cuenta
+                                    self.nombre_titular = nombre_titular
+                                    self.balance = balance
+                                
+                                def generar_balance (self):
+                                    print(self.balance)
+
+                                def depositar(self, monto):
+                                    if monto > 0:
+                                        self.balance += monto
+
+                            mi_cuenta = CuentaBancaria ("105-356-643", "Nora Smith", 5600)
+                        </b>
+                    </code>
+                </pre>
+            </p>
+            
+            <p>
+                En el código anterior se crea una instancia nueva que será guardada en la variable mi_cuenta. Si queremos acceder a algún atributo de esa cuenta que creamos podemos hacerlo, para esto utilizamos el método print, y pasamos como valor a imprimir el nombre de la variable mi_cuenta (en este caso), punto (.), balance. Podemos verlo en la última línea del código siguiente.
+            </p>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                                    self.num_cuenta = num_cuenta
+                                    self.nombre_titular = nombre_titular
+                                    self.balance = balance
+                                
+                                def generar_balance (self):
+                                    print(self.balance)
+
+                                def depositar(self, monto):
+                                    if monto > 0:
+                                        self.balance += monto
+
+                            mi_cuenta = CuentaBancaria ("105-356-643", "Nora Smith", 5600)
+                            
+                            print(mi_cuenta.balance)
+                            
+                        </b>
+                    </code>
+                </pre>
+            </p>
+
+            <p>
+                Sin embargo, nosotros definimos un método para mostrar el balance de la cuenta, por lo que podemos llamar a dicho método en lugar de escribir la última línea del código anterior, veremos este cambio en el siguiente código. Como no hay otro parámetro además de self, llamamos al método con el paréntesis vacío. Recorodemos que debemos aumir que self tiene su propio valor, ese valor de self será la instancia que está llamando al método, self va a tener una referencia o un valor que se refiere a una instancia en el programa, en este caso se refiere a la instancia mi_cuenta.
+            </p>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                                    self.num_cuenta = num_cuenta
+                                    self.nombre_titular = nombre_titular
+                                    self.balance = balance
+                                
+                                def generar_balance (self):
+                                    print(self.balance)
+
+                                def depositar(self, monto):
+                                    if monto > 0:
+                                        self.balance += monto
+
+                            mi_cuenta = CuentaBancaria ("105-356-643", "Nora Smith", 5600)
+                            
+                            mi_cuenta.generar_balance ()
+                        </b>
+                    </code>
+                </pre>
+            </p>
+
+            <p>
+                De igual forma podemos llamar al método depositar, en este caso si debemos pasar un valor que será el monto del depósito que realizará el titular de la cuenta. El siguiente código muestra el código con el llamado de dicho método.
+            </p>
+
+            <p>
+                <pre>
+                    <code>
+                        <b>
+                            class CuentaBancaria:
+                                def __init__(self, num_cuenta, nombre_titular, balance):
+                                    self.num_cuenta = num_cuenta
+                                    self.nombre_titular = nombre_titular
+                                    self.balance = balance
+                                
+                                def generar_balance (self):
+                                    print(self.balance)
+
+                                def depositar(self, monto):
+                                    if monto > 0:
+                                        self.balance += monto
+
+                            mi_cuenta = CuentaBancaria ("105-356-643", "Nora Smith", 5600)
+                            
+                            mi_cuenta.generar_balance ()
+                            mi_cuenta.depositar(400)
+                            mi_cuenta.generar_balance ()
+                        </b>
+                    </code>
+                </pre>
+            </p>
+
+            <p>
+                Ver archivo <a href="../python/30. POO.py">29. try-except.py</a> para ver programa.
+            </p>
+
+            
         </section>
     </main>
 </body>
